@@ -1,0 +1,13 @@
+div.read-out {
+  border-left: none;
+  border-right: none;
+  border-top: 1px ridge var(--color-border-light-tertiary);
+  border-bottom: 1px ridge var(--color-border-light-tertiary);
+  box-shadow: 0 5px 10px -8px #000;
+  padding: 0.25rem;
+  margin: 0.5rem 0;
+}
+div.read-out p {
+  font-family: 'Roboto Condensed'; /* Change to 'Good OT' if you have that font available */
+  font-size: 1.05em; /* using the x.xxem format means that your size changes scale with the default font size set by Foundry, but you can set this value to the height in pixels you want (e.g. 12px) or the percentage of the base font height (e.g. 105%) */
+}
