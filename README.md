@@ -230,9 +230,10 @@ In this section I will go into detail on how to gather fonts and exact colors to
 * Record the Hex Code in any text file, eventually you will make a list of colors in your .css file. I keep a journal entry with HTML templates in it, and have a page that shows the different colors that I’ve extracted.
 
 # Part 3: Adventure Specific Changes
+Now that you have the fonts and colors, you really have everything you need to start sprucing up your journals and make them look like the actual PDFs. For the following part, I will show you how to flag your journals to use only the rules you write for that adventure, and then go over some of the common changes I make to text like headings.
 
 ## Step 1: Adjusting World Scripter and adding Flags to your Journals
-* With some basic rules under your belt, we can start to make specific adjustments to make your adventures look good.
+* Before you start writing new rules you need to have the journal entries you are going to be converting. If you are starting with the default output from PDF to Foundry you will probably want to move some of the journals around, PDF to Foundry sometimes puts things in places you might not expect.
 * You will need to add the following script to the settings for World Scripter. You need to change the xxx and XXX values to the abbreviation you are going to use for the adventure. You are going to type this a fair bit so I recommend making it short. For an example, I am going to adapt Troubles in Otari so my abbreviations will be TIO and tio.
     * ```javascript
       Hooks.on("renderJournalSheet", (app, html) => { //I adapted this code from the official Beginner Box module
