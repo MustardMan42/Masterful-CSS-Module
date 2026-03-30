@@ -76,7 +76,7 @@ What we just did used a combination of HTML (Hypertext Markup Language) and a CS
 
 ### The HTML Side
 
-It's important to remember that most HTML elements have a beginning and an end. For example, a standard text element indicates the start of the element with a pair of angle brackets surrounding the letter p: \<p>. After that start indicator text can be typed freely until the text ends or a new paragraph starts. At that point HTML needs another pair of angle brackets with a forward slash before the letter p to indicate the end, like so: \</p>. If you use \<div> to start a container you need to make sure that at the end of the contained you place a \</div> to indicate where the container ends. HTML will try to include these end brackets if you forget, but it may make mistakes if your end brackets are missing.
+It's important to remember that most HTML elements have a beginning and an end. For example, a standard text element indicates the start of the element with a pair of angle brackets surrounding the letter p: \<p>. After that start indicator text can be typed freely until the text ends or a new paragraph starts. At that point HTML needs another pair of angle brackets with a forward slash before the letter p to indicate the end, like so: \</p>. If you use \<div> to start a container you need to make sure that at the end of the container you place a \</div> to indicate where the container ends. HTML will try to include these end brackets if you forget, but it may make mistakes if your end brackets are missing.
 
 Here are some of the most common HTML elements I've used in Foundry:
 * \<p> is the most common element, and it contains body text.
@@ -206,12 +206,12 @@ In this section I will go into detail on how to gather fonts and exact colors to
 * It’s certainly possible to make your own .css file without using a module as a guide, but you’ll have to work a lot harder.
 
 ## Step 2: Gather Fonts
-* One of the other benefits of having an official module as a guide is that you should have some font files available in the module directory. You can copy these files into your own CSS folder. If you want your journal to look as good as possible you will want these font files.
+* An additional benefit of having an official module as a guide is that you should have some of the officialy font files available in the module directory. You can copy these files into your own CSS folder. If you want your journal to look as good as possible you will want these font files.
 * Pathfinder 2e typically uses the following fonts:
    * Body text uses Sabon Light Standard Roman (Gelasio is a pretty solid alternative that comes with the Pathfinder 2e system by default)
    * Headings use Good OT Bold (Roboto Condensed Bold is a good alternative that)
    * Read aloud and side boxes use Good OT (Roboto Condensed is a good alternative)
-   * Headings for items and stat blocks use Good OT Condensed Bold (serif).
+   * Headings for items and stat blocks use Good OT Condensed Bold
    * Specific adventures often have a unique font for top level headings, but you can usually find these out using [fontfinder](https://www.myfonts.com/pages/whatthefont/).
       * I myself have found the title fonts for Crown of the Kobold King (You Are Loved), Troubles in Otari (Alembic Beta) and Headshot the Rot (Roadkill Heavy) using this website.
 * Once you have a font file, place it in your CSS folder, and then install it in Foundry under the core settings. You will want to keep the file path so you can add the fonts to your css file
