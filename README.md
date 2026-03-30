@@ -20,6 +20,7 @@ I have good news. 🎵You've got the touch, you've got the power!🎵 I can teac
 * u/lady_of_luck has [a really helpful guide](https://www.reddit.com/r/FoundryVTT/s/oblivFIO1g) that I recommend reading, I used their guide and their code for this project.
 
 # Part 1: Basics of HTML and CSS
+In this section I will go over the basics of writing a CSS file and the accompanying HTML code in Foundry to ensure that the style rules apply. I will go into some detail into the reasoning why to follow this method, but HTML and CSS are the building blocks of the internet that you use daily, and there are many robust resources you can use to learn much more than I will be teaching you today. I will be focusing on adapting Pathfinder adventures, but the techniques in this section will apply universally to any adventure text that you have a PDF copy of.
 
 ## Step 1: Creating Your CSS File
 * Once you’ve installed World Scripter in Foundry and Visual Studio on the computer you’re working from, you are ready to get started.
@@ -259,7 +260,7 @@ This should be enough for you to start writing your own CSS rules. The following
       ```
 * In Foundry, import the .json files for each respective journal, being extremely careful that you choose the correct file for each journal.
 
-## Step 2: Write Style rules specific to the adventure
+## Step 2: Write a list of Variables for Adventure fonts and colors
 * Next we will list some variables. These make it so that if you make a mistake you only need to correct that mistake in one location, instead of all over the code.
 * Create a new rule for elements with the class we gave to those journals through World Scripter, in our case tio. Make sure you include the period. Under this class we are going to name a variable and give it a value, in this case we want to get the color of the read out text. We will call it `--tio-green-darkest`, and for the value use the hex code of the color. See [Part 2, step 3](#step-3-getting-exact-colors) for more info on gathering color hexcodes.
    * ```css
@@ -274,13 +275,15 @@ This should be enough for you to start writing your own CSS rules. The following
         --tio-green-darker: #306137;
         --tio-green-light: #6c8a6a;
         --tio-red-light: #953345;
-        --tio-red-dark: #5d0000
+        --tio-red-dark: #5d0000;
         --tio-white-off: #e9e5df;
         --tio-gray: #57585b;
-        --h1-font: 'Alembic Beta';
+        --tio-h1-font: 'Alembic Beta';
       }   
      ```
-* Next we are going to write some new rules to use this variable, starting with the Read Out box from [Part 1, step 2](#step-2-read-out-box) We will need one for the div and one for paragraphs inside the div. Each rule needs to start with the class we assigned earlier, in our case .tio. You can copy the border rules we made earlier and remove the listed variable and replace it with `#000`, which is just black. Additionally, we will make a similar rule to change the color of the paragraph text to our new variable `--tio-red-light`. Using a variable instead of a hex code is as simple as typing `var()` and copying and pasting the name of the variable into the parentheses.
+
+## Step 3: Write Style rules specific to the adventure
+* Next we are going to write some new rules to use this variable, starting with the Read Out box from [Part 1, step 2](#step-2-read-out-box) We will need one for the \<div> and one for paragraphs (\<p>) inside the \<div>. Each rule needs to start with the class we assigned earlier, in our case .tio. You can copy the border rules we made earlier and remove the listed variable and replace it with `#000`, which is just black. Additionally, we will make a similar rule to change the color of the paragraph text to our new variable `--tio-red-light`. Using a variable instead of a hex code is as simple as typing `var()` and copying and pasting the name of the variable into the parentheses.
    * ```css
      .tio div.read-out {
         border-top: 1px ridge #000;
@@ -293,49 +296,62 @@ This should be enough for you to start writing your own CSS rules. The following
 * Reload Foundry and see the changes have taken place
 * The beauty of writing your .css file this way is you can make a specific style for an adventure, and have that style only apply to the journals you’ve flagged as needing them. The rest of Foundry and your other journals will not be affected. Additionally, because of how we applied that class via World Scripter, you can change how the headings appear in your Journals as well, which is otherwise difficult to do.
 
-## Step 3: Adventure Specific Headings
+## Step 4: Adventure Specific Headings
 * Because we applied a class to the journal entry via World Scripter we can write rules that would normally be too general and would conflict with other styles in Foundry. The biggest example of this is likely headings, which are used all over Foundry. We can target the headings that appear in our journals and change them too match the aesthetic of the adventure.
    * ```css
-     .tio h1 {
-       color:var(--tio-green-darkest);
+     .tio h1, .tio h2, .tio h3 {
        border: none;
-       font-family: var(--h1-font);
+       margin: 0.05em 0 0;
+       text-transform: uppercase;
+       overflow: hidden;
+       padding-top: 0.2em;
+     }
+     .tio h1 {
+       color: var(--tio-green-darkest);
+       font-family: var(--tio-h1-font);
        font-size: 2em;
        text-align: center;
-       margin: 0.05em 0 0;
-       text-transform: uppercase;
-       overflow: hidden;
-       padding-top: 0.2em;
      }
      .tio h2 {
-       color:var(--tio-green-dark);
-       border: none;
-       font-family: var(--h1-font);
+       color: var(--tio-green-darker);
+       font-family: var(--tio-h1-font);
        font-size: 1.6em;
-       margin: 0.05em 0 0;
-       text-transform: uppercase;
-       overflow: hidden;
-       padding-top: 0.2em;
      }
      .tio h3 {
-       color:var(--tio-green-light);
-       border: none;
+       color: var(--tio-green-light);
        font-family: 'Good OT Bold';
        font-size: 1.4em;
-       margin: 0.05em 0 0;
-       text-transform: uppercase;
-       overflow: hidden;
-       padding-top: 0.2em;
      }
      ```
-* With these rules in place whenever you use \<h1>, \<h2>, or \<h3> in a journal that you gave the flag .tio, that heading will be styled to match the adventure. This will work even on the top heading of a journal page, and youu can adjust the level of each page using the default Foundrty journal editor to get the heading correct.
+* With these rules in place, whenever you use \<h1>, \<h2>, or \<h3> in a journal that you gave the flag .tio, that heading will be styled to match the adventure. This will work even on the top heading of a journal page, and you can adjust the level of each page using the default Foundry journal editor to get the heading correct.
 
 # Part 4: Adding Foundry Automation
 * In Pathfinder 2e we have some baseline automation that can be achieved to make running the game as smooth as possible. We are going to automate some checks, some actions, and some other miscellaneous rolls.
 * Your best resource is the [Pathfinder 2e Foundry VTT System wiki](https://github.com/foundryvtt/pf2e/wiki)
+
+## Step 1: Inline Rolls
 * Opening up this journal page, we can see some DCs, and some capitalized words that indicate that a specific action is being called for. This one says “Balance,” which is an action the player characters can take. To automate this we will use /act, surrounded by double brackets. Then we add the dc by typing dc equals 19. Make sure you use all lowercase when typing out the name of the action.
-* Hit save and you will see we now have an inline link that can be sent to the chat when needed if one of your players has their character do that action.
-* Be careful of actions that are longer than one word, you will need to connect each word together with a dash in order for the system to recognize the action.
+   * Your final text in the editor should like something like this:
+     ```
+     [[/act balance dc=19]]
+     ```
+* Hit save and you will see we now have an inline link that can be sent to the chat when needed if one of your players has their character do that action. The benefit of using this method is that if an action always uses a blind roll or has certain traits that a player might use to get a benefit these are automatically applied. This makes it faster to check if there might be a rule conflict by hovering over the trait, for example checking if an action has the concentration trait.
+* Be careful of actions that are longer than one word, you will need to connect each word together with a dash in order for the system to recognize the action. Some actions will require you to specify a skill in order to work, like Recall Knowledge. To specify the skill you use the same formatting as the dc, type skill, the equal sign, and then the name of the skill.
+   * ```
+     [[/act recall-knowledge dc=15 skill=Arcana]]
+     ```
+* For some skill checks there is no associated action, an adventure might simply have a player make a skill check without suggesting a specific action. In that case you can write an inline check like so:
+   * ```
+     @Check[Stealth|dc:15]
+     ```
+   * Note that elements of the check are separated by the | symbol, and that you use a colon instead of an equal sign. You can still manually add traits to the check, like making it a secret check. You simply add a separator | after the dc, type "traits:", and can add traits separated by commas. You can even replace the name of the roll by adjoining text in curly brackets after the standard brackets.
+   * ```
+     @Check[Stealth|dc:15|traits:move,secret]{Roll Stealth or Die on Your Knees!}
+     ```
+* Another inline roll that comes up often is damage, like when an adventure describes a simple trap. For this I prefer to use @Damage, it has the most robust functionality. You type @Damage and then a pair of standard brackets. Inside list the dice to roll, and after the dice have additional set of brackets to set the type of damage.
+   * ```
+     @Damage[8d6[fire]]
+     ```
+## Step 2: Linking Items and Locations in Journals
 * Another handy tip is to link journal pages together, here the adventure references A2, which is another location that has a journal page. After highlighting the text you can drag that journal page onto that text to create a link.
-* For items, you will want to press the magic wand in the journal editor and highlight the text of the item. For better precision, you can open the compendium browser, search for the item, and drag the item from the compendium onto your highlighted text.
-* This journal details an item from this adventure and the rules needed to run it, we can use this to explain how to automate a damage roll. Type “@Damage”, and then double brackets. Inside the first bracket type the roll, and in the second bracket type the damage type.
+* For items, conditions, creatures, spells, actions, and hazards, you will want to press the magic wand in the journal editor and highlight the text. Foundry will try to match the selected text with something from the pathfinder compendiums. For better precision, you can open the compendium browser, search for the item, and drag the item from the compendium onto your highlighted text. You can also drag and drop from your downloaded items and creatures, but be aware that if there are bugfixes or changes to that item you won't get them, and that if you delete the item from your foundry world the link will be broken.
