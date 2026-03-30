@@ -195,15 +195,15 @@ I recommend using [W3Schools](https://www.w3schools.com) if you ever have questi
 This should be enough for you to start writing your own CSS rules. The following sections Part 2 and Part 3 will dive deeper into getting your rules even close to the actual Pathfinder adventures using Fonts and colors
 
 # Part 2: Fine Details
+In this section I will go into detail on how to gather fonts and exact colors to use in your journals. Because you've followed the previous steps in the guide there will be less explanation of why to do things a certain way and more explanation of how to do them. Where possible I will refer back to previous sections in Part 1.
 
-## Step 1: Learn from the masters
-* Rule 1: The official module devs are smarter and cooler than you
-* With an official module installed, you can open up your Foundry directory, navigate to the module’s folder and get the .css file the module uses. Opening this file in Visual Studio can be overwhelming, but there’s a lot to learn from these files.
-* Alternatively, you can press F12 in Foundry to change the CSS in real time and learn how the official module accomplishes what it does.
+## Step 1: Study an Official Module
+* Rule 1 of Foundry is that the official module devs are smarter and cooler than you. They've done the hard work and may have a professtional backround in frontend web development. Instead of you getting that education, I encourage you to study how they are able to get the effects that you want to achieve.
+* With an official module installed, you can open up your Foundry directory, navigate to the module’s folder and get the .css file the module uses. Opening this file in Visual Studio can be overwhelming, but there’s a lot to learn from these files. One important thing you can learn is the name of specific properties that can be used, like `font-size`, `font-family`, or `text-transform`. While you certainly can copy and paste rules from this .css file for your own use, I find that understand the rules I won't apply them correctly to my own file.
+* Another method of study is to inspect the module journals in Foundry. You can press F12 to change the CSS in real time and learn how the official module accomplishes what it does.
 * Click the element picker in the console window to inspect the part of the journal you want to look at. This works similarly in Firefox as well.
 * Once selected the element will appear in the “Elements” breakdown and we can see under “Styles” what style rules are being applied to that element. You can use the checkboxes to play around and turn rules off and on, or edit them directly.
-* One important thing you can learn is the name of specific properties that can be used, like `font-size`, `font-family`, or `text-transform`.
-* It’s possible to make your own .css file without using a module as a guide, but you’ll have to work a lot harder.
+* It’s certainly possible to make your own .css file without using a module as a guide, but you’ll have to work a lot harder.
 
 ## Step 2: Gather Fonts
 * One of the other benefits of having an official module as a guide is that you should have some font files available in the module directory. You can copy these files into your own CSS folder. If you want your journal to look as good as possible you will want these font files.
