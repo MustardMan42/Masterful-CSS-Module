@@ -83,19 +83,19 @@ There are two ways I am aware of to inject a .css file into Foundry, one is to u
 
 ## Step 1c: Injecting Your .css File
  * If you are only planning on having one style, as in you have one adventure in this module and none of those style rules will ever need to apply to some other journal, you only need to add a small chunk of code to the module.json that directs Foundry to the css file in your directory. Open the module.json file in Visual Studio and add the code below after the "packs" section. You will need to change the file path to match the location and name of your .css file in your directory.
-   * ```js
+   * ```json
          "styles": [
             "src": "styles/tutorial.css" //Put file path here!
          ],
      ```
  * If you are planning on having multiple styles, as in you have multiple adventures in a single module and some rules might be universal but others should only be applied to specific adventures you choose, you need to add a line of code that directs Foundry to a .mjs file we will create shortly. That line of code looks like this. You will need to change the file path to match the location and name of your .mjs file in your directory.
-   * ```js
+   * ```json
          "esmodules": [
             "tutorial.mjs" //Put file path here!
          ],
      ```
    * A .mjs file is a file that contains javascript code. In our case we are including this code to apply the .css file, later on we will add new lines of code to apply a class to journal entries that we will flag for each adventure. In Visual Studio press CTRL + N to open a new text file. You will want to copy the code below into your new file, and be sure that you set the module_ID and the file path to your css file correctly.
-     * ```js
+     * ```javascript
          const MODULE_ID = "tutorial"; //Change this to the lowercase id at the top of your module.json
 
          var cssId = 'myCss'; //I adapted this code from Reddit user u/lady_of_luck, without their post none of my exploration into this topic would have been possible
