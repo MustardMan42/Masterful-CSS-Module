@@ -22,6 +22,8 @@ I have good news. 🎵You've got the touch, you've got the power!🎵 I can teac
 # Part 1: Basics of HTML and CSS
 In this section I will go over the basics of writing a CSS file and the accompanying HTML code in Foundry to ensure that the style rules apply. I will go into some detail into the reasoning why to follow this method, but HTML and CSS are the building blocks of the internet that you use daily, and there are many robust resources you can use to learn much more than I will be teaching you today. I will be focusing on adapting Pathfinder adventures, but the techniques in this section will apply universally to any adventure text that you have a PDF copy of.
 
+>[!IMPORTANT]
+>Please make sure you click one of the dropdowns below to continue with this tutorial
 There are two ways I am aware of to inject a .css file into Foundry, one is to use a module like World Scripter and the other is to create your own module. As of today (May 2026), v14 is the newest version of Foundry and the World Scripter module is not updated to v14. I am updating this guide to have my origian setup, which I believe is easier, and the new set up that doesn't need a module to work and should be a little more stable. Once you have the .css file injected the rest of the tutorial will be mostly the same. Click the dropdown below that corresponds to the version of Foundry you will be using.
 
 <details>
@@ -31,8 +33,10 @@ There are two ways I am aware of to inject a .css file into Foundry, one is to u
 * Once you’ve installed World Scripter in Foundry and Visual Studio on the computer you’re working from, you are ready to get started.
 * In your Foundry directory create a folder called css. I recommend putting this folder inside your assets folder. I also recommend making a subfolder in the css folder called fonts. You can put any fonts you plan on using here and they will be safe in the event that you uninstall or update any modules.
 * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
+
 > [!TIP]
 > I have provided a tutorial.css file that you can use but I strongly recommend that you create your own from scratch to learn Visual Studio and just use my file to compare to.
+
 * Open the World Scripter settings in Foundry and paste the following code into the World Scripter window, and change the URL path to the location path of your new .css file
     * ```javascript
       var cssId = 'myCss'; //I got this code from Reddit user u/lady_of_luck, without their post none of my exploration into this topic would have been possible
@@ -63,8 +67,10 @@ There are two ways I am aware of to inject a .css file into Foundry, one is to u
    * Create a compendium pack, I am calling mine MustardMan42 Conversions. You will need to write the lowercase name yourself for this category, in my case mustadman42-conversions. I like using the Adventure document type, but if you are only including journals or only listing maps you could use journals or scenes.
    * Select the required system from the list of systems you have installed
    * Once you press the "Create Module" button at the bottom of the window, Foundry will create a folder in the module directory and a module.json file in that directory
+
 > [!TIP]
 > If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later 
+
 * With your module created you will need to set up some additional folders to stay organized
    * In the folder for your module you will want to create at least an assets folder and a styles folder. If you are planning on having a lot of script files you could create a scripts folder.
    * Inside your styles folder you will want to make a fonts subfolder, this is where all your fonts for this module should live. In the styles folder itself you will put your css file.
