@@ -80,8 +80,23 @@ There are two ways I am aware of to inject a .css file into Foundry, one is to u
      * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
      * I have provided a tutorial.css file that you can use but I strongly recommend that you create your own from scratch to learn Visual Studio and just use my file to compare to.
    * You can organize your assets folder however you wish, but if you have multiple adventures in one module I recommend having separate folders for each adventure here. As an example, I could have a folder for Troubles in Otari called tio, a folder for Crown of the Kobold King called cotkk, and then a folder called monster core for any pictures of monsters that are going to appear in both adventures. Inside each adventure folder I recommend having a folder for portraits, a folder for tokens, a folder for journal images, and a folder for maps.
+
+## Step 1c: Injecting Your .css File
+ * If you are only planning on having one style, as in you have one adventure in this module and none of those style rules will ever need to apply to some other journal, you only need to add a small chunk of code to the module.json that directs Foundry to the css file in your directory. Open the module.json file in Visul Studio and add That line of code looks like this. Make sure that the file path is 100% accurate.
+   * ```js
+         "styles": [
+            "src": "styles/tutorial.css" //Put link or file path here!
+         ],
+     ```
+ * If you are planning on having multiple styles, as in you have multiple adventures in your module and some rules might be universal but others should only be applied to specific adventures you choose, you need to add a line of code that directs Foundry to a .mjs file we will create shortly. That line of code looks like this. Make sure that the file path is 100% accurate.
+   * ```js
+         "esmodules": [
+            "tutorial.mjs" //Put link or file path here!
+         ],
+     ```
+
 </details>
-  
+
 ## Step 2: Read Out Box
 * You are ready to start writing style rules in your .css file, but for this first one I am going to advise you copy my code. The [second example](#step-3-embedding-an-image) will walk through step by step how I write these rules.
 * Our first target will be a common element in a Pathfinder adventure, the Read Out box. Open your .css file in Visual Studio and copy and paste the following code:
