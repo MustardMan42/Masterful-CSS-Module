@@ -19,6 +19,10 @@ I have good news. 🎵You've got the touch, you've got the power!🎵 I can teac
 * [What the Font Font Finder](https://www.myfonts.com/pages/whatthefont/)
 * u/lady_of_luck has [a really helpful guide](https://www.reddit.com/r/FoundryVTT/s/oblivFIO1g) that I recommend reading, I used their guide and their code for this project.
 
+<details>
+
+<summary>Foundry v13 with World Scripter</summary>
+
 # Part 1: Basics of HTML and CSS
 In this section I will go over the basics of writing a CSS file and the accompanying HTML code in Foundry to ensure that the style rules apply. I will go into some detail into the reasoning why to follow this method, but HTML and CSS are the building blocks of the internet that you use daily, and there are many robust resources you can use to learn much more than I will be teaching you today. I will be focusing on adapting Pathfinder adventures, but the techniques in this section will apply universally to any adventure text that you have a PDF copy of.
 
@@ -43,6 +47,14 @@ In this section I will go over the basics of writing a CSS file and the accompan
           head.appendChild(link);
       }
       ```
+</details>
+
+<details>
+
+<summary>Foundry v14 (World Scripter not required)</summary>
+
+</details>
+  
 ## Step 2: Read Out Box
 * You are ready to start writing style rules in your .css file, but for this first one I am going to advise you copy my code. The [second example](#step-3-embedding-an-image) will walk through step by step how I write these rules.
 * Our first target will be a common element in a Pathfinder adventure, the Read Out box. Open your .css file in Visual Studio and copy and paste the following code:
