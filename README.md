@@ -359,9 +359,9 @@ Now that you have the fonts and colors, you really have everything you need to s
       ```
 * In Foundry, import the .json files for each respective journal, being extremely careful that you choose the correct file for each journal.
 
-## Step 2: Write a list of Variables for Adventure fonts and colors
+## Step 3: Write a list of Variables for Adventure fonts and colors
 * Next we will list some variables. These make it so that if you make a mistake you only need to correct that mistake in one location, instead of all over the code.
-* Create a new rule for elements with the class we gave to those journals through World Scripter, in our case tio. Make sure you include the period. Under this class we are going to name a variable and give it a value, in this case we want to get the color of the read out text. We will call it `--tio-green-darkest`, and for the value use the hex code of the color. See [Part 2, step 3](#step-3-getting-exact-colors) for more info on gathering color hexcodes.
+* Create a new rule for elements with the class we gave to those journals, in our case `.tio`. Make sure you include the period. Under this class we are going to name a variable and give it a value, in this case we want to get the color of the read out text. We will call it `--tio-green-darkest`, and for the value use the hex code of the color. See [Part 2, step 3](#step-3-getting-exact-colors) for more info on gathering color hexcodes.
    * ```css
      .tio {
         --tio-green-darkest: #004316;
@@ -381,7 +381,7 @@ Now that you have the fonts and colors, you really have everything you need to s
       }   
      ```
 
-## Step 3: Write Style rules specific to the adventure
+## Step 4: Write Style rules specific to the adventure
 * Next we are going to write some new rules to use this variable, starting with the Read Out box from [Part 1, step 2](#step-2-read-out-box) We will need one for the \<div> and one for paragraphs (\<p>) inside the \<div>. Each rule needs to start with the class we assigned earlier, in our case .tio. You can copy the border rules we made earlier and remove the listed variable and replace it with `#000`, which is just black. Additionally, we will make a similar rule to change the color of the paragraph text to our new variable `--tio-red-light`. Using a variable instead of a hex code is as simple as typing `var()` and copying and pasting the name of the variable into the parentheses.
    * ```css
      .tio div.read-out {
@@ -393,10 +393,10 @@ Now that you have the fonts and colors, you really have everything you need to s
      }
      ```
 * Reload Foundry and see the changes have taken place
-* The beauty of writing your .css file this way is you can make a specific style for an adventure, and have that style only apply to the journals you’ve flagged as needing them. The rest of Foundry and your other journals will not be affected. Additionally, because of how we applied that class via World Scripter, you can change how the headings appear in your Journals as well, which is otherwise difficult to do.
+* The beauty of writing your .css file this way is you can make a specific style for an adventure, and have that style only apply to the journals you’ve flagged as needing them. The rest of Foundry and your other journals will not be affected. Additionally, because of how we applied that class, you can change how the headings appear in your Journals as well, which is otherwise difficult to do.
 
-## Step 4: Adventure Specific Headings
-* Because we applied a class to the journal entry via World Scripter we can write rules that would normally be too general and would conflict with other styles in Foundry. The biggest example of this is likely headings, which are used all over Foundry. We can target the headings that appear in our journals and change them too match the aesthetic of the adventure.
+## Step 5: Adventure Specific Headings
+* Because we applied a class to the journal entry we can write rules that would normally be too general and would conflict with other styles in Foundry. The biggest example of this is likely headings, which are used all over Foundry. We can target the headings that appear in our journals and change them too match the aesthetic of the adventure.
    * ```css
      .tio h1, .tio h2, .tio h3 {
        border: none;
