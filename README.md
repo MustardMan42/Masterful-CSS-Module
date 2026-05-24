@@ -312,6 +312,7 @@ Now that you have the fonts and colors, you really have everything you need to s
 
 <details>
 <summary>v13 with World Scripter</summary>
+
 ## Step 1: Adjusting World Scripter
 * Before you start writing new rules you need to have the journal entries you are going to be converting. If you are starting with the default output from PDF to Foundry you will probably want to move some of the journals around, PDF to Foundry sometimes puts things in places you might not expect.
 * You will need to add the following script to the settings for World Scripter. You need to change the xxx and XXX values to the abbreviation you are going to use for the adventure. You are going to type this a fair bit so I recommend making it short. For an example, I am going to adapt Troubles in Otari so my abbreviations will be TIO and tio.
