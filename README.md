@@ -34,9 +34,7 @@ There are two ways I am aware of to inject a .css file into Foundry, one is to u
 * Once you’ve installed World Scripter in Foundry and Visual Studio on the computer you’re working from, you are ready to get started.
 * In your Foundry directory create a folder called css. I recommend putting this folder inside your assets folder. I also recommend making a subfolder in the css folder called fonts. You can put any fonts you plan on using here and they will be safe in the event that you uninstall or update any modules.
 * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
-
-> [!TIP]
-> I have provided a tutorial.css file that you can use but I strongly recommend that you create your own from scratch to learn Visual Studio and just use my file to compare to.
+   * I have provided a tutorial.css file that you can use but I strongly recommend that you create your own from scratch to learn Visual Studio and just use my file to compare to.
 
 * Open the World Scripter settings in Foundry and paste the following code into the World Scripter window, and change the URL path to the location path of your new .css file
     * ```javascript
@@ -76,8 +74,7 @@ There are two ways I am aware of to inject a .css file into Foundry, one is to u
    * In the folder for your module you will want to create at least an assets folder and a styles folder. If you are planning on having a lot of script files you could create a scripts folder.
    * Inside your styles folder you will want to make a fonts subfolder, this is where all your fonts for this module should live. In the styles folder itself you will put your css file.
      * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
-       > [!TIP]
-       > I have provided a tutorial.css file that you can use but I strongly recommend that you create your own from scratch to learn Visual Studio and just use my file to compare to.
+     * I have provided a tutorial.css file that you can use but I strongly recommend that you create your own from scratch to learn Visual Studio and just use my file to compare to.
    * In your assets folder you can organize it however you want, but if you have multiple adventures in one module I recommend having separate folders for each adventure here. As an example, I could have a folder for Troubles in Otari called tio, a folder for Crown of the Kobold King called cotkk, and then a folder called monster core for any pictures of monsters that are going to appear in both adventures. Inside each adventure folder I recommend having a folder for portraits, a folder for tokens, a folder for journal images, and a folder for maps.
 </details>
   
