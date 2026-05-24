@@ -55,27 +55,31 @@ There are two ways I am aware of to inject a .css file into Foundry, one is to u
 
 <details>
 <summary>Foundry v14 (World Scripter not required)</summary>
-   
-## Step 1: Setting Up A Module  
-* In the modules page in your Foundry set up page, click the gear icon to start creating the module that will contain the adventure(s) you are adapating
+
+## Step 1a: One Module to Rule Them All, or Many Modules to Fill the Skies and Black the Sun?
+ * This method of injecting a .css file is more involved then the module method, and it is worth deciding in advance how you will organize your content. Modules are portable, so you can install your module on different worlds and have access to the same content each time, you can give away your module or sell it (as long as the content in the module is yours to sell). There are two basic ways to proceed, make one mega-module that will store all the adventures you are adapting or creating, or create a separate module for each adventure.
+ * The benefit of making a separate module per adventure is that it is simpler. If you are selling or giving away your own content, you will almost certainly want to use this method because everything your "customers" will need to run the content in Foundry should be included in one module. Setting up the .css file is also easier this way, but you will need a separate file for each module. The downside to making multiple modules is that you may end up repeating assets across multiple modules. Any images, font files, or sound files that you end up using in multiple adventures will get repeated. If you are storage restricted, it is possible that multiple modules would be less preferable for you. You also may have more difficulty maintaining multiple modules, if you make an improvement in one module you’ll need to repeat that work across every other module. If you are selling your module, your customers may expect you to maintain the module and update it to the most current version of Foundry.
+ * The benefit of making a single larger module is that you don’t need to repeat assets every time they are required. While the base installation may be large, you’ll be less likely to run into issues of remembering which module contains which assets. Additionally, having a larger module makes it easier to maintain backups and keep the module up to date. The initial setup may take more effort, but if Foundry makes a change that breaks your module you will only need to fix it once instead of across multiple modules.
+ * For personal use I prefer one module that contains all the adventures that I’ve adapted to Foundry. If I were to distribute the module to others I would prefer one module per adventure, but I would want to create some sort of system to standardize and document any sweeping changes across all modules.
+
+## Step 1b: Setting Up A Module  
+* Once you've decided how many modules you are making you will need to create the modules using Foundry
+* In the modules page in your Foundry set up page, click the gear icon to open up a form to start inputting the module informatin
    * Name the module anything you’d like. The package identifier should populate automatically
    * Set the package version. If you are doing this module as part of a large project you may have a real system for the version numbers, especially if this module will be available to the public. Otherwise you can leave it at 1.
    * You don’t need a package URL, but if you are hosting your module on github or another file sharing service you can put the link there. That is important again for if you are selling or giving away your module to other people.
    * You should set the compatibility to the current version of Foundry, if you later upgrade to a new version you will want to change this number later or Foundry will yell at you every time you load the world.
    * Add author details if you expect to be available to maintain this project for others, otherwise this is unnecessary
-   * Create a compendium pack, I am calling mine MustardMan42 Conversions. You will need to write the lowercase name yourself for this category, in my case mustadman42-conversions. I like using the Adventure document type, but if you are only including journals or only listing maps you could use journals or scenes.
+   * Create a compendium pack. You will need to write the lowercase name yourself for this category, in my case mustardman42-conversions. I like using the Adventure document type, but if you are only including journals or only listing maps you could use journals or scenes.
    * Select the required system from the list of systems you have installed
    * Once you press the "Create Module" button at the bottom of the window, Foundry will create a folder in the module directory and a module.json file in that directory
-
-> [!TIP]
-> If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later 
-
+* If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later
 * With your module created you will need to set up some additional folders to stay organized
    * In the folder for your module you will want to create at least an assets folder and a styles folder. If you are planning on having a lot of script files you could create a scripts folder.
    * Inside your styles folder you will want to make a fonts subfolder, this is where all your fonts for this module should live. In the styles folder itself you will put your css file.
      * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
      * I have provided a tutorial.css file that you can use but I strongly recommend that you create your own from scratch to learn Visual Studio and just use my file to compare to.
-   * In your assets folder you can organize it however you want, but if you have multiple adventures in one module I recommend having separate folders for each adventure here. As an example, I could have a folder for Troubles in Otari called tio, a folder for Crown of the Kobold King called cotkk, and then a folder called monster core for any pictures of monsters that are going to appear in both adventures. Inside each adventure folder I recommend having a folder for portraits, a folder for tokens, a folder for journal images, and a folder for maps.
+   * You can organize your assets folder however you wish, but if you have multiple adventures in one module I recommend having separate folders for each adventure here. As an example, I could have a folder for Troubles in Otari called tio, a folder for Crown of the Kobold King called cotkk, and then a folder called monster core for any pictures of monsters that are going to appear in both adventures. Inside each adventure folder I recommend having a folder for portraits, a folder for tokens, a folder for journal images, and a folder for maps.
 </details>
   
 ## Step 2: Read Out Box
