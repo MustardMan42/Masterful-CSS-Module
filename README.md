@@ -19,12 +19,11 @@ I have good news. 🎵You've got the touch, you've got the power!🎵 I can teac
 * [What the Font Font Finder](https://www.myfonts.com/pages/whatthefont/)
 * u/lady_of_luck has [a really helpful guide](https://www.reddit.com/r/FoundryVTT/s/oblivFIO1g) that I recommend reading, I used their guide and their code for this project.
 
-<details>
-
-<summary>Foundry v13 with World Scripter</summary>
-
 # Part 1: Basics of HTML and CSS
 In this section I will go over the basics of writing a CSS file and the accompanying HTML code in Foundry to ensure that the style rules apply. I will go into some detail into the reasoning why to follow this method, but HTML and CSS are the building blocks of the internet that you use daily, and there are many robust resources you can use to learn much more than I will be teaching you today. I will be focusing on adapting Pathfinder adventures, but the techniques in this section will apply universally to any adventure text that you have a PDF copy of.
+
+<details>
+<summary>Foundry v13 with World Scripter</summary>
 
 ## Step 1: Creating Your CSS File
 * Once you’ve installed World Scripter in Foundry and Visual Studio on the computer you’re working from, you are ready to get started.
@@ -50,9 +49,27 @@ In this section I will go over the basics of writing a CSS file and the accompan
 </details>
 
 <details>
-
 <summary>Foundry v14 (World Scripter not required)</summary>
-
+   
+## Step 1: Setting Up A Module  
+* In the modules page in your Foundry set up page, click the gear icon to start creating the module that will contain the adventure(s) you are adapating
+   * Name the module anything you’d like. The package identifier should populate automatically
+   * Set the package version. If you are doing this module as part of a large project you may have a real system for the version numbers, especially if this module will be available to the public. Otherwise you can leave it at 1.
+   * You don’t need a package URL, but if you are hosting your module on github or another file sharing service you can put the link there. That is important again for if you are selling or giving away your module to other people.
+   * You should set the compatibility to the current version of Foundry, if you later upgrade to a new version you will want to change this number later or Foundry will yell at you every time you load the world.
+   * Add author details if you expect to be available to maintain this project for others, otherwise this is unnecessary
+   * Create a compendium pack, I am calling mine MustardMan42 Conversions. You will need to write the lowercase name yourself for this category, in my case mustadman42-conversions. I like using the Adventure document type, but if you are only including journals or only listing maps you could use journals or scenes.
+   * Select the required system from the list of systems you have installed
+   * Once you press the "Create Module" button at the bottom of the window, Foundry will create a folder in the module directory and a module.json file in that directory
+> [!TIP]
+> If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later 
+* With your module created you will need to set up some additional folders to stay organized
+   * In the folder for your module you will want to create at least an assets folder and a styles folder. If you are planning on having a lot of script files you could create a scripts folder.
+   * Inside your styles folder you will want to make a fonts subfolder, this is where all your fonts for this module should live. In the styles folder itself you will put your css file.
+     * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
+       > [!TIP]
+       > I have provided a tutorial.css file that you can use but I strongly recommend that you create your own from scratch to learn Visual Studio and just use my file to compare to.
+   * In your assets folder you can organize it however you want, but if you have multiple adventures in one module I recommend having separate folders for each adventure here. As an example, I could have a folder for Troubles in Otari called tio, a folder for Crown of the Kobold King called cotkk, and then a folder called monster core for any pictures of monsters that are going to appear in both adventures. Inside each adventure folder I recommend having a folder for portraits, a folder for tokens, a folder for journal images, and a folder for maps.
 </details>
   
 ## Step 2: Read Out Box
