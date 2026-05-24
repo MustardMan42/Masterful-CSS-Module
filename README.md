@@ -85,15 +85,38 @@ There are two ways I am aware of to inject a .css file into Foundry, one is to u
  * If you are only planning on having one style, as in you have one adventure in this module and none of those style rules will ever need to apply to some other journal, you only need to add a small chunk of code to the module.json that directs Foundry to the css file in your directory. Open the module.json file in Visul Studio and add That line of code looks like this. Make sure that the file path is 100% accurate.
    * ```js
          "styles": [
-            "src": "styles/tutorial.css" //Put link or file path here!
+            "src": "styles/tutorial.css" //Put file path here!
          ],
      ```
- * If you are planning on having multiple styles, as in you have multiple adventures in your module and some rules might be universal but others should only be applied to specific adventures you choose, you need to add a line of code that directs Foundry to a .mjs file we will create shortly. That line of code looks like this. Make sure that the file path is 100% accurate.
+ * If you are planning on having multiple styles, as in you have multiple adventures in a single module and some rules might be universal but others should only be applied to specific adventures you choose, you need to add a line of code that directs Foundry to a .mjs file we will create shortly. That line of code looks like this. Make sure that the file path is 100% accurate.
    * ```js
          "esmodules": [
-            "tutorial.mjs" //Put link or file path here!
+            "tutorial.mjs" //Put file path here!
          ],
      ```
+   * A .mjs file is a file that contains javascript code. In our case we are including this code to apply the .css file, later on we will add new lines of code to apply a class to journal entries that we will flag for each adventure. For Foundry v14, this is the code that I’m using, make sure that you set the file path to your css file correctly.
+     * ```js
+         const MODULE_ID = "tutorial"; //Change this to the lowercase id at the top of your module.json
+
+         var cssId = 'myCss'; //I adapted this code from Reddit user u/lady_of_luck, without their post none of my exploration into this topic would have been possible
+            if (!document.getElementById(cssId))
+            {
+              var head  = document.getElementsByTagName('head')[0];
+              var link  = document.createElement('link');
+              link.id   = cssId;
+              link.rel  = 'stylesheet';
+              link.type = 'text/css';
+              link.href = 'modules/tutorial/styles/tutorial.css'; //Put file path here!
+              link.media = 'all';
+              head.appendChild(link);
+            }
+       ```
+ * Now we can start to move existing journals and characters into your module.
+   * Reload Foundry and open up the world with the journals you are going to be styling.
+   * You will need to open the settings for the world and enable your module, which will require another reload.
+   * You should now see in the compendiums tab your compendium, which you can edit if you unlock it. If you have existing journals, actors, scenes, or items for your adventures you can create an adventure in this compendium and drag and drop the elements from the sidebar to the compendium.
+
+You are now ready to actually start writing style rules to make your journals pretty
 
 </details>
 
