@@ -24,6 +24,7 @@ In this section I will go over the basics of writing a CSS file and the accompan
 
 >[!IMPORTANT]
 >Please make sure you click one of the dropdowns below to continue with this tutorial
+
 There are two ways I am aware of to inject a .css file into Foundry, one is to use a module like World Scripter and the other is to create your own module. As of today (May 2026), v14 is the newest version of Foundry and the World Scripter module is not updated to v14. I am updating this guide to have my origian setup, which I believe is easier, and the new set up that doesn't need a module to work and should be a little more stable. Once you have the .css file injected the rest of the tutorial will be mostly the same. Click the dropdown below that corresponds to the version of Foundry you will be using.
 
 <details>
