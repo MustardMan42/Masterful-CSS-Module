@@ -341,7 +341,7 @@ Now that you have the fonts and colors, you really have everything you need to s
       }
     });
     ```
-<details>
+</details>
 
 ## Step 2: Adding Flags to Journals
 * Next you will want to export the .json files of the Journal Entries you are including in this adventure. At this point you should make a copy of those files **and never delete it**. It is easy to overwrite the wrong journal and lose hours of work when importing these files back into Foundry. I recommend having one folder for backup and one folder for current.
