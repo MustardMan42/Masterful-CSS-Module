@@ -308,13 +308,15 @@ In this section I will go into detail on how to gather fonts and exact colors to
 * Record the Hex Code in any text file, eventually you will make a list of colors in your .css file. I keep a journal entry with HTML templates in it, and have a page that shows the different colors that I’ve extracted.
 
 # Part 3: Adventure Specific Changes
-Now that you have the fonts and colors, you really have everything you need to start sprucing up your journals and make them look like the actual PDFs. For the following part, I will show you how to flag your journals to use only the rules you write for that adventure, and then go over some of the common changes I make to text like headings.
+Now that you have the fonts and colors, you really have everything you need to start sprucing up your journals and make them look like the actual PDFs. For the following part, I will show you how to flag your journals to use only the rules you write for that adventure, and then go over some of the common changes I make to text like headings. This process is different depending on whether you are using v13 and World Scripter or v14 with your own module
 
-## Step 1: Adjusting World Scripter and adding Flags to your Journals
+<details>
+<summary>v13 with World Scripter</summary>
+## Step 1: Adjusting World Scripter
 * Before you start writing new rules you need to have the journal entries you are going to be converting. If you are starting with the default output from PDF to Foundry you will probably want to move some of the journals around, PDF to Foundry sometimes puts things in places you might not expect.
 * You will need to add the following script to the settings for World Scripter. You need to change the xxx and XXX values to the abbreviation you are going to use for the adventure. You are going to type this a fair bit so I recommend making it short. For an example, I am going to adapt Troubles in Otari so my abbreviations will be TIO and tio.
     * ```javascript
-      Hooks.on("renderJournalSheet", (app, html) => { //I adapted this code from the official Beginner Box module
+     Hooks.on("renderJournalSheet", (app, html) => { //I adapted this code from the official Beginner Box module
         const journal = app.document;
         if (journal.getFlag("core", "isXXX")) html[0].classList.add("xxx"); //Change the xxx and XXX to the abbreviation for the title of the adventure you are adapting, ex. Crown of the Kobold King becomes COTKK and cotkk
       });
@@ -324,6 +326,22 @@ Now that you have the fonts and colors, you really have everything you need to s
         if (journal.getFlag("core", "isXXX")) html[0].classList.add("xxx"); //Change the xxx and XXX to the abbreviation for the title of the adventure you are adapting, ex. Fists of the Ruby Phoenix becomes FOTRP and fotrp
       });
       ```
+</details>
+
+<details>
+<summary>v14 with your own module</summary>
+## Step 1: Adjusting your .mjs file
+* Open your .mjs file in Visual Studio and add the following code.
+  * ```javascript
+    Hooks.on("renderJournalEntrySheet", (app) => {
+      if (app.document.getFlag("core", "isXXX")) { 
+        app.element?.classList?.add("xxx"); //Change the xxx and XXX to the abbreviation for the title of the adventure you are adapting, ex. Fists of the Ruby Phoenix becomes FOTRP and fotrp
+      }
+    });
+    ```
+<details>
+
+## Step 2: Adding Flags to Journals
 * Next you will want to export the .json files of the Journal Entries you are including in this adventure. At this point you should make a copy of those files **and never delete it**. It is easy to overwrite the wrong journal and lose hours of work when importing these files back into Foundry. I recommend having one folder for backup and one folder for current.
 >[!CAUTION]
 >I am NOT kidding, you should make a back up of any .json file before you import them back into Foundry, ESPECIALLY if you've already started editing the text
