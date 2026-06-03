@@ -6,14 +6,16 @@
 		{
 			"name": "MustardMan42",
 			"discord": "MustardMan42",
-			"url": "https://youtube.com/@mustardman42",
-		},
+			"url": "https://youtube.com/@mustardman42"
+		}
 	],
-	"version": "0.9.3",
-	"compatibility": {
-		"minimum": "14",
-		"verified": "14"
-	}
+	"version": "0.9.4",
+	"compatibility": [
+		{
+			"minimum": "14",
+			"verified": "14"
+		}
+	],
 	"packs": [
 		{
 		  "name": "mustardman42's-magnificent-examples",
@@ -23,15 +25,15 @@
 		  "ownership": {
 			  "PLAYER": "NONE",
 			  "TRUSTED": "OBSERVER",
-			  "ASSISTANT": "OWNER",
-				  },
+			  "ASSISTANT": "OWNER"
+				  }
 		}
 	],
 	"url": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT",
 	"readme": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/blob/v14/README.md",
-	"manifest": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/releases/download/0.9.3/module.json",
-	"download": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/releases/download/0.9.3/mustardman42.s-masterful-css-module.zip",
+	"manifest": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/releases/download/0.9.4/module.json",
+	"download": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/releases/download/0.9.4/mustardman42's-masterful-css-module.zip",
 	"esmodules": [
        "mustardman42-tutorial.mjs"
-    ],
+    ]
 }
