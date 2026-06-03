@@ -1,9 +1,12 @@
 {
 	"id": "mustardman42's-masterful-css-module",
 	"title": "MustardMan42's Masterful CSS Module",
+	"description": "A module to guide you as you seize power over your Foundry journals and spread beauty across your adventures.",
 	"authors": [
 		{
 			"name": "MustardMan42",
+			"discord": "MustardMan42"
+			"url": "https://youtube.com/@mustardman42",
 		},
 	],
 	"version": "1.0.0",
@@ -11,6 +14,22 @@
 		"minimum": "14",
 		"verified": "14"
 	}
+	"packs": [
+		{
+		  "name": "mustardman42's-magnificent-examples",
+		  "label": "MustardMan42's Magnificent Examples",
+		  "path": "./packs/pack1",
+		  "type": "Adventure",
+		  "ownership": {
+			  "PLAYER": "NONE",
+			  "TRUSTED": "OBSERVER"
+			  "ASSISTANT": "OWNER",
+				  },
+		}
+	],
+	"url": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/tree/v14",
+	"readme": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/blob/v14/README.md",
+	"manifest": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/blob/v14/mustardman42's-masterful-css-module/module.json",
 	"esmodules": [
        "mustardman42-tutorial.mjs"
     ],

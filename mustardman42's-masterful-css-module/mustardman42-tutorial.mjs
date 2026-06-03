@@ -17,3 +17,4 @@
     app.element?.classList?.add("xxx"); //Change the xxx and XXX to the abbreviation for the title of the adventure you are adapting, ex. Fists of the Ruby Phoenix becomes FOTRP and fotrp
   }
 });
+console.log("MustardMan42's Masterful Module is locked, loaded and ready to roll out!");
