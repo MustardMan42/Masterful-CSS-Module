@@ -22,14 +22,6 @@ I have good news. 🎵You've got the touch, you've got the power!🎵 I can teac
 # Part 1: Basics of HTML and CSS
 In this section I will go over the basics of writing a CSS file and the accompanying HTML code in Foundry to ensure that the style rules apply. I will go into some detail into the reasoning why to follow this method, but HTML and CSS are the building blocks of the internet that you use daily, and there are many robust resources you can use to learn much more than I will be teaching you today. I will be focusing on adapting Pathfinder adventures, but the techniques in this section will apply universally to any adventure text that you have a PDF copy of.
 
->[!IMPORTANT]
->Please make sure you click one of the dropdowns below to continue with this tutorial
-
-There are two ways I am aware of to inject a .css file into Foundry, one is to use a module like World Scripter and the other is to create your own module. As of today (May 2026), v14 is the newest version of Foundry and the World Scripter module is not updated to v14. I am updating this guide to have my origian setup, which I believe is easier, and the new set up that doesn't need a module to work and should be a little more stable. Once you have the .css file injected the rest of the tutorial will be mostly the same. Click the dropdown below that corresponds to the version of Foundry you will be using.
-
-<details>
-<summary>Foundry v13 with World Scripter</summary>
-
 ## Step 1: Creating Your CSS File
 * Once you’ve installed World Scripter in Foundry and Visual Studio on the computer you’re working from, you are ready to get started.
 * In your Foundry directory create a folder called css. I recommend putting this folder inside your assets folder. I also recommend making a subfolder in the css folder called fonts. You can put any fonts you plan on using here and they will be safe in the event that you uninstall or update any modules.
@@ -51,75 +43,6 @@ There are two ways I am aware of to inject a .css file into Foundry, one is to u
           head.appendChild(link);
       }
       ```
-</details>
-
-<details>
-<summary>Foundry v14 (World Scripter not required)</summary>
-
-## Step 1a: One Module to Rule Them All, or Many Modules to Fill the Skies and Black the Sun?
- * This method of injecting a .css file is more involved then the module method, and it is worth deciding in advance how you will organize your content. Modules are portable, so you can install your module on different worlds and have access to the same content each time, you can give away your module or sell it (as long as the content in the module is yours to sell). There are two basic ways to proceed, make one mega-module that will store all the adventures you are adapting or creating, or create a separate module for each adventure.
- * The benefit of making a separate module per adventure is that it is simpler. If you are selling or giving away your own content, you will almost certainly want to use this method because everything your "customers" will need to run the content in Foundry should be included in one module. Setting up the .css file is also easier this way, but you will need a separate file for each module. The downside to making multiple modules is that you may end up repeating assets across multiple modules. Any images, font files, or sound files that you end up using in multiple adventures will get repeated. If you are storage restricted, it is possible that multiple modules would be less preferable for you. You also may have more difficulty maintaining multiple modules, if you make an improvement in one module you’ll need to repeat that work across every other module. If you are selling your module, your customers may expect you to maintain the module and update it to the most current version of Foundry.
- * The benefit of making a single larger module is that you don’t need to repeat assets every time they are required. While the base installation may be large, you’ll be less likely to run into issues of remembering which module contains which assets. Additionally, having a larger module makes it easier to maintain backups and keep the module up to date. The initial setup may take more effort, but if Foundry makes a change that breaks your module you will only need to fix it once instead of across multiple modules.
- * For personal use I prefer one module that contains all the adventures that I’ve adapted to Foundry. If I were to distribute the module to others I would prefer one module per adventure, but I would want to create some sort of system to standardize and document any sweeping changes across all modules.
-
-## Step 1b: Setting Up A Module  
-* Once you've decided how many modules you are making you will need to create the modules using Foundry
-* In the modules page in your Foundry set up page, click the gear icon to open up a form to start inputting the module informatin
-   * Name the module anything you’d like. The package identifier should populate automatically
-   * Set the package version. If you are doing this module as part of a large project you may have a real system for the version numbers, especially if this module will be available to the public. Otherwise you can leave it at 1.
-   * You don’t need a package URL, but if you are hosting your module on github or another file sharing service you can put the link there. That is important again for if you are selling or giving away your module to other people.
-   * You should set the compatibility to the current version of Foundry, if you later upgrade to a new version you will want to change this number later or Foundry will yell at you every time you load the world.
-   * Add author details if you expect to be available to maintain this project for others, otherwise this is unnecessary
-   * Create a compendium pack. You will need to write the lowercase name yourself for this category, in my case mustardman42-conversions. I like using the Adventure document type, but if you are only including journals or only listing maps you could use journals or scenes.
-   * Select the required system from the list of systems you have installed
-   * Once you press the "Create Module" button at the bottom of the window, Foundry will create a folder in the module directory and a module.json file in that directory
-* If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later
-* With your module created you will need to set up some additional folders to stay organized
-   * In the folder for your module you will want to create at least an assets folder and a styles folder. If you are planning on having a lot of script files you could create a scripts folder.
-   * Inside your styles folder you will want to make a fonts subfolder, this is where all your fonts for this module should live. In the styles folder itself you will put your css file.
-     * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
-     * I have provided a tutorial.css file that you can use but I strongly recommend that you create your own from scratch to learn Visual Studio and just use my file to compare to.
-   * You can organize your assets folder however you wish, but if you have multiple adventures in one module I recommend having separate folders for each adventure here. As an example, I could have a folder for Troubles in Otari called tio, a folder for Crown of the Kobold King called cotkk, and then a folder called monster core for any pictures of monsters that are going to appear in both adventures. Inside each adventure folder I recommend having a folder for portraits, a folder for tokens, a folder for journal images, and a folder for maps.
-
-## Step 1c: Injecting Your .css File
- * If you are only planning on having one style, as in you have one adventure in this module and none of those style rules will ever need to apply to some other journal, you only need to add a small chunk of code to the module.json that directs Foundry to the css file in your directory. Open the module.json file in Visual Studio and add the code below after the "packs" section. You will need to change the file path to match the location and name of your .css file in your directory.
-   * ```json
-         "styles": [
-            "src": "styles/tutorial.css"
-         ],
-     ```
- * If you are planning on having multiple styles, as in you have multiple adventures in a single module and some rules might be universal but others should only be applied to specific adventures you choose, you need to add a line of code that directs Foundry to a .mjs file we will create shortly. That line of code looks like this. You will need to change the file path to match the location and name of your .mjs file in your directory.
-   * ```json
-         "esmodules": [
-            "tutorial.mjs"
-         ],
-     ```
-   * A .mjs file is a file that contains javascript code. In our case we are including this code to apply the .css file, later on we will add new lines of code to apply a class to journal entries that we will flag for each adventure. In Visual Studio press CTRL + N to open a new text file. You will want to copy the code below into your new file, and be sure that you set the module_ID and the file path to your css file correctly.
-     * ```javascript
-         const MODULE_ID = "tutorial"; //Change this to the lowercase id at the top of your module.json
-
-         var cssId = 'myCss'; //I adapted this code from Reddit user u/lady_of_luck, without their post none of my exploration into this topic would have been possible
-            if (!document.getElementById(cssId))
-            {
-              var head  = document.getElementsByTagName('head')[0];
-              var link  = document.createElement('link');
-              link.id   = cssId;
-              link.rel  = 'stylesheet';
-              link.type = 'text/css';
-              link.href = 'modules/tutorial/styles/tutorial.css'; //Put file path here!
-              link.media = 'all';
-              head.appendChild(link);
-            }
-       ```
- * Now we can start to move any existing journals, scenes, actors, and items into your module.
-   * Reload Foundry and open up the world with the journals you are going to be styling.
-   * You will need to open the settings for the world and enable your module, which will require another reload.
-   * You should now see in the compendiums tab your compendium, which you can edit if you unlock it.
-   * If you have existing journals, actors, scenes, or items for your adventure(s) (such as from a PDF to Foundry import), you can create an adventure in this compendium and drag and drop the elements from the sidebar to the compendium.
-
-Once the journals are inside your compendium, you are ready to actually start writing style rules to make your journals pretty
-
-</details>
 
 ## Step 2: Read Out Box
 * You are ready to start writing style rules in your .css file, but for this first one I am going to advise you copy my code. The [second example](#step-3-embedding-an-image) will walk through step by step how I write these rules.
@@ -310,9 +233,6 @@ In this section I will go into detail on how to gather fonts and exact colors to
 # Part 3: Adventure Specific Changes
 Now that you have the fonts and colors, you really have everything you need to start sprucing up your journals and make them look like the actual PDFs. For the following part, I will show you how to flag your journals to use only the rules you write for that adventure, and then go over some of the common changes I make to text like headings. This process is different depending on whether you are using v13 and World Scripter or v14 with your own module
 
-<details>
-<summary>v13 with World Scripter</summary>
-
 ## Step 1: Adjusting World Scripter
 * Before you start writing new rules you need to have the journal entries you are going to be converting. If you are starting with the default output from PDF to Foundry you will probably want to move some of the journals around, PDF to Foundry sometimes puts things in places you might not expect.
 * You will need to add the following script to the settings for World Scripter. You need to change the xxx and XXX values to the abbreviation you are going to use for the adventure. You are going to type this a fair bit so I recommend making it short. For an example, I am going to adapt Troubles in Otari so my abbreviations will be TIO and tio.
@@ -327,21 +247,6 @@ Now that you have the fonts and colors, you really have everything you need to s
         if (journal.getFlag("core", "isXXX")) html[0].classList.add("xxx"); //Change the xxx and XXX to the abbreviation for the title of the adventure you are adapting, ex. Fists of the Ruby Phoenix becomes FOTRP and fotrp
       });
       ```
-</details>
-
-<details>
-<summary>v14 with your own module</summary>
-  
-## Step 1: Adjusting your .mjs file
-* Open your .mjs file in Visual Studio and add the following code.
-  * ```javascript
-    Hooks.on("renderJournalEntrySheet", (app) => {
-      if (app.document.getFlag("core", "isXXX")) { 
-        app.element?.classList?.add("xxx"); //Change the xxx and XXX to the abbreviation for the title of the adventure you are adapting, ex. Fists of the Ruby Phoenix becomes FOTRP and fotrp
-      }
-    });
-    ```
-</details>
 
 ## Step 2: Adding Flags to Journals
 * Next you will want to export the .json files of the Journal Entries you are including in this adventure. At this point you should make a copy of those files **and never delete it**. It is easy to overwrite the wrong journal and lose hours of work when importing these files back into Foundry. I recommend having one folder for backup and one folder for current.
