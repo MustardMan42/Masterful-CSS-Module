@@ -1,6 +1,6 @@
 {
-	"id": "mustardman42's-masterful-css-module",
-	"title": "MustardMan42's Masterful CSS Module",
+	"id": "masterful-css-module",
+	"title": "Masterful CSS Module",
 	"description": "A module to guide you as you seize power over your Foundry journals and spread beauty across your adventures.",
 	"authors": [
 		{
@@ -9,7 +9,7 @@
 			"url": "https://youtube.com/@mustardman42"
 		}
 	],
-	"version": "0.9.4",
+	"version": "0.9.5",
 	"compatibility": [
 		{
 			"minimum": "14",
@@ -18,8 +18,8 @@
 	],
 	"packs": [
 		{
-		  "name": "mustardman42's-magnificent-examples",
-		  "label": "MustardMan42's Magnificent Examples",
+		  "name": "magnificent-examples-by-mustardman42",
+		  "label": "Magnificent Examples by MustardMan42",
 		  "path": "./packs/pack1",
 		  "type": "Adventure",
 		  "ownership": {
@@ -31,8 +31,8 @@
 	],
 	"url": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT",
 	"readme": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/blob/v14/README.md",
-	"manifest": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/releases/download/0.9.4/module.json",
-	"download": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/releases/download/0.9.4/mustardman42's-masterful-css-module.zip",
+	"manifest": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/releases/download/0.9.5/module.json",
+	"download": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/releases/download/0.9.5/masterful-css-module.zip",
 	"esmodules": [
        "mustardman42-tutorial.mjs"
     ]

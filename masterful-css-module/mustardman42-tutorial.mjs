@@ -13,8 +13,8 @@
        head.appendChild(link);
      }
  Hooks.on("renderJournalEntrySheet", (app) => {
-  if (app.document.getFlag("mustardman42's-masterful-module", "isXXX")) { 
+  if (app.document.getFlag("masterful-css-module", "isXXX")) { 
     app.element?.classList?.add("xxx"); //Change the xxx and XXX to the abbreviation for the title of the adventure you are adapting, ex. Fists of the Ruby Phoenix becomes FOTRP and fotrp
   }
 });
-console.log("MustardMan42's Masterful Module is locked, loaded and ready to roll out!");
+console.log("MustardMan42's Masterful CSS Module is locked, loaded and ready to roll out!");
