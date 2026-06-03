@@ -9,7 +9,7 @@
 			"url": "https://youtube.com/@mustardman42",
 		},
 	],
-	"version": "0.9.1",
+	"version": "0.9.2",
 	"compatibility": {
 		"minimum": "14",
 		"verified": "14"
@@ -30,7 +30,7 @@
 	"url": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT",
 	"readme": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/blob/v14/README.md",
 	"manifest": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/blob/v14/mustardman42's-masterful-css-module/module.json",
-	"download": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/archive/refs/tags/0.9.1.zip",
+	"download": "https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/archive/refs/tags/0.9.2.zip",
 	"esmodules": [
        "mustardman42-tutorial.mjs"
     ],
