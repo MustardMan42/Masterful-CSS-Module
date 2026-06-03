@@ -1,4 +1,17 @@
- 
-   "esmodules": [
+{
+	"id": "mustardman42's-masterful-module",
+	"title": "MustardMan42's Masterful CSS Module",
+	"authors": [
+		{
+			"name": "MustardMan42",
+		},
+	],
+	"version": "1.0.0",
+	"compatibility": {
+		"minimum": "14",
+		"verified": "14"
+	}
+	"esmodules": [
        "mustardman42-tutorial.mjs"
     ],
+}
