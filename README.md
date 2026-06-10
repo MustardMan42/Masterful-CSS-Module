@@ -288,7 +288,7 @@ In this section I will go into detail on how to gather fonts and exact colors to
 * Record the Hex Code in any text file, eventually you will make a list of colors in your .css file. I keep a journal entry with HTML templates in it, and have a page that shows the different colors that I’ve extracted.
 
 # Part 3: Adventure Specific Changes
-Now that you have the fonts and colors, you really have everything you need to start sprucing up your journals and make them look like the actual PDFs. For the following part, I will show you how to flag your journals to use only the rules you write for that adventure, and then go over some of the common changes I make to text like headings. This process is different depending on whether you are using v13 and World Scripter or v14 with your own module
+Now that you have the fonts and colors, you really have everything you need to start sprucing up your journals and make them look like the actual PDFs. For the following part, I will show you how to flag your journals to use only the rules you write for that adventure, and then go over some of the common changes I make to text like headings.
   
 ## Step 1: Adjusting your .mjs file
 * Open your .mjs file in Visual Studio and add the following code.
