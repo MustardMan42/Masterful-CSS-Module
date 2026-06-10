@@ -267,7 +267,7 @@ In this section I will go into detail on how to gather fonts and exact colors to
 * An additional benefit of having an official module as a guide is that you should have some of the officialy font files available in the module directory. You can copy these files into your own CSS folder. If you want your journal to look as good as possible you will want these font files.
 * Pathfinder 2e typically uses the following fonts:
    * Body text uses Sabon Light Standard Roman (Gelasio is a pretty solid alternative that comes with the Pathfinder 2e system by default)
-   * Headings use Good OT Bold (Roboto Condensed Bold is a good alternative that)
+   * Headings use Good OT Bold (Roboto Condensed Bold is a good alternative)
    * Read aloud and side boxes use Good OT (Roboto Condensed is a good alternative)
    * Headings for items and stat blocks use Good OT Condensed Bold
    * Specific adventures often have a unique font for top level headings, but you can usually find these out using [fontfinder](https://www.myfonts.com/pages/whatthefont/).
