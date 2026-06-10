@@ -294,8 +294,8 @@ Now that you have the fonts and colors, you really have everything you need to s
 * Open your .mjs file in Visual Studio and add the following code.
   * ```javascript
     Hooks.on("renderJournalEntrySheet", (app) => {
-      if (app.document.getFlag("core", "isXXX")) { 
-        app.element?.classList?.add("xxx"); //Change the xxx and XXX to the abbreviation for the title of the adventure you are adapting, ex. Fists of the Ruby Phoenix becomes FOTRP and fotrp
+      if (app.document.getFlag("tutorial", "isXXX")) { //Change the "tutorial" to the lowercase name of your module
+        app.element?.classList?.add("xxx"); //Change the "xxx" and "XXX" to the abbreviation for the title of the adventure you are adapting, ex. Fists of the Ruby Phoenix becomes FOTRP and fotrp
       }
     });
     ```
@@ -306,10 +306,10 @@ Now that you have the fonts and colors, you really have everything you need to s
 >I am NOT kidding, you should make a back up of any .json file before you import them back into Foundry, ESPECIALLY if you've already started editing the text
 * With the exported .json files, open each .json file in Visual Studio
 * We need to add a very small bit of code to each file. We are placing this code under the main “flags” entry, be sure not to put it under one of the individual page. The easiest way to get to the right spot is to collapse the “pages” range on the left, and the correct “flags” section should be right after the “pages”.
-* Paste the following code inside the “flags” bracket. You will need to change the XXX to the abbreviation you wrote for the World Scripter code. Do this to each .json and save each one in your “Current” folder.
+* Paste the following code inside the “flags” bracket. You will need to change the "tutorial" to the name of your module and the XXX to the abbreviation you wrote for your .mjs file. Do this to each .json and save each one in your “Current” folder.
     * ```json
        
-          "core": {
+          "tutorial": {
             "isXXX": true
           }
         
