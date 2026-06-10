@@ -84,7 +84,7 @@ Here are some of the most common HTML elements I've used in Foundry:
 * \<h1>, \<h2>, and \<h3> are all headings, Foundry applies some rules to headings by default like increasing the font size and making the text bold, and applying an underline.
 * \<hr> stands for horizontal rule, and is the element that creates a line that typically spreads across the whole page to divide two sections.
 * \<img> is the element that points Foundry to a picture file and displays the picture. Foundry styles \<img> elements to have 1 pixel black border by default 😠
-* \<div> is a common way of grouping content together and is short for division. \<div> elements are flexible and usually has no styling by default.
+* \<div> is a common way of grouping content together and is short for division. \<div> elements are flexible and usually have no styling by default.
 * \<figure> is a container that can house an \<img> element and a styled \<figcaption> element that gives the picture a title.
 * \<table> is a group of rows and columns, if you've used Google Sheets or Microsoft Excel you likely know how this works.
 
