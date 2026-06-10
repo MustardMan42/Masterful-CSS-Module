@@ -108,8 +108,8 @@ Once the journals are inside your compendium, you are ready to actually start wr
       div.read-out {
         border-left: none;
         border-right: none;
-        border-top: 1px ridge var(--color-border-light-tertiary);
-        border-bottom: 1px ridge var(--color-border-light-tertiary);
+        border-top: 1px ridge #000;
+        border-bottom: 1px ridge #000;
         box-shadow: 0 5px 10px -8px #000;
         padding: 0.25rem;
         margin: 0.5rem 0;
@@ -214,8 +214,8 @@ I recommend using [W3Schools](https://www.w3schools.com) if you ever have questi
      div.side-box {
         border-left: none;
         border-right: none;
-        border-top: 1px ridge var(--color-border-light-tertiary); /* These borders will only appear on the top and bottom and will use a variable that comes with Foundry by default. You can change this to any other variable or just #000 if you want the borderd to be black*/
-        border-bottom: 1px ridge var(--color-border-light-tertiary);
+        border-top: 1px ridge #000; /* These borders will only appear on the top and bottom and will be black*/
+        border-bottom: 1px ridge #000;
         background: rgba(0, 0, 0, 0.05); /* Side Boxes in Pathfinder often have a background so that they stand out from body text. You can set this to any color you like, I've set this one to the default color of a table in Foundry */
         float: right;
         max-width: 33%;
