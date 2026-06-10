@@ -1,8 +1,8 @@
 div.read-out {
   border-left: none;
   border-right: none;
-  border-top: 1px ridge var(--color-border-light-tertiary);
-  border-bottom: 1px ridge var(--color-border-light-tertiary);
+  border-top: 1px ridge #000;
+  border-bottom: 1px ridge #000;
   box-shadow: 0 5px 10px -8px #000;
   padding: 0.25rem;
   margin: 0.5rem 0;
@@ -14,7 +14,7 @@ div.read-out p {
 figure.insert {
    float: right;
    max-width: 33%;
-   margin: 0;
+   margin: none;
 }
 figure.insert figcaption {
    font-family: 'Gelasio';
@@ -22,13 +22,14 @@ figure.insert figcaption {
    font-style: normal;
 }
 figure.insert img {
-   border: 0;
+   border: none;
+   box-shadow: none;
 }
 div.side-box {
    border-left: none;
    border-right: none;
-   border-top: 1px ridge var(--color-border-light-tertiary); /* These borders will only appear on the top and bottom and will use a variable that comes with Foundry by default. You can change this to any other variable or just #000 if you want the borderd to be black*/
-   border-bottom: 1px ridge var(--color-border-light-tertiary);
+   border-top: 1px ridge #000; /* These borders will only appear on the top and bottom and will use a variable that comes with Foundry by default. You can change this to any other variable or just #000 if you want the borderd to be black*/
+   border-bottom: 1px ridge #000;
    background: rgba(0, 0, 0, 0.05); /* Side Boxes in Pathfinder often have a background so that they stand out from body text. You can set this to any color you like, I've set this one to the default color of a table in Foundry */
    float: right;
    max-width: 33%;
@@ -44,4 +45,16 @@ div.side-box p.header {
    font-weight: bold;
    text-transform: uppercase;
    text-align: center;
+}
+.letter .journal-entry-content {
+  background-image: url("mustardman42-parchment.webp");
+  background-size: cover;
+}
+.letter p {
+  font-family: "La Belle Aurore";
+  font-size: 42pt;
+  text-align: center;
+}
+.letter .journal-header {
+  display: none;
 }
