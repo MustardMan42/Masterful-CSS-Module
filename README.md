@@ -253,7 +253,7 @@ I recommend using [W3Schools](https://www.w3schools.com) if you ever have questi
      ```
 This should be enough for you to start writing your own CSS rules. The following sections Part 2 and Part 3 will dive deeper into getting your rules even close to the actual Pathfinder adventures using Fonts and colors
 
-# Part 2: Fine Details
+# Part 3: Fine Details
 In this section I will go into detail on how to gather fonts and exact colors to use in your journals. Because you've followed the previous steps in the guide there will be less explanation of why to do things a certain way and more explanation of how to do them. Where possible I will refer back to previous sections in Part 1.
 
 ## Step 1: Study an Official Module
@@ -382,7 +382,7 @@ Now that you have the fonts and colors, you really have everything you need to s
      ```
 * With these rules in place, whenever you use \<h1>, \<h2>, or \<h3> in a journal that you gave the flag .tio, that heading will be styled to match the adventure. This will work even on the top heading of a journal page, and you can adjust the level of each page using the default Foundry journal editor to get the heading correct.
 
-# Part 4: Adding Foundry Automation
+# Part 5: Adding Foundry Automation
 * In Pathfinder 2e we have some baseline automation that can be achieved to make running the game as smooth as possible. We are going to automate some checks, some actions, and some other miscellaneous rolls.
 * Your best resource is the [Pathfinder 2e Foundry VTT System wiki](https://github.com/foundryvtt/pf2e/wiki)
 
