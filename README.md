@@ -24,7 +24,7 @@ In this section I will go over the basics of writing a CSS file and the accompan
 There are two ways I am aware of to inject a .css file into Foundry, one is to use a module like World Scripter and the other is to create your own module. As of today (May 2026), v14 is the newest version of Foundry and the World Scripter module is not updated to v14. You will either need to make your own module or use mine. You can paste that link in your Modules installation page, and it will install my module, which has some basic journals and basic scripting to inject a .css file. Be aware that if you customize anything from that module your changes may get wiped if the module is ever updated. It is safer to create your own module and use mine as a basis, which is what the following steps will teach you how to do.
 
 ## Step 1: Install the Masterful CSS Module in Foundry
- * Copy [this link to the 1.0.0 module.json file](https://github.com/MustardMan42/Custom-CSS-for-Foundry-VTT/releases/download/1.0.0/module.json)
+ * Copy [this link to the 1.0.0 module.json file](https://github.com/MustardMan42/Masterful-CSS-Module/releases/download/1.0.0/module.json)
  * In Foundry, open your Add-on Modules page and click the "Install Module" button
  * At the bottom of the installation window, paste the link (above) in the Manifest URL box
  * Click the "Install" button
