@@ -34,6 +34,7 @@ There are two ways I am aware of to inject a .css file into Foundry, one is to u
  * Open a World of your choosing in the Game Worlds tab in Foundry
  * In the Settings, click the Manage Modules button under Game Settings
  * Click the checkbox next to Masterful CSS Module and then click Save Module Settings. The world should then reload
+ * Under the compendiums tab, click the compendium called Magnificent Examples by MustardMan42, and import the journals from that compendium. Those journals contain a (very basic) local version of this text guide, an HTML Examples journal with html code for quick copying, and a Letter Handouts journal pre-styled to look like a letter your players found.
 
 ## Step 1a: One Module to Rule Them All, or Many Modules to Fill the Skies and Black the Sun?
  * This method of injecting a .css file is more involved then the previous v13 World Scripter method, and it is worth deciding in advance how you will organize your content. Modules are portable, so you can install your module on different worlds and have access to the same content each time, you can give away your module or sell it (as long as the content in the module is yours to sell). There are two basic ways to proceed, make one mega-module that will store all the adventures you are adapting or creating, or create a separate module for each adventure.
