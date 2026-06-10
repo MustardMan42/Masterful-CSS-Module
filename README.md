@@ -5,6 +5,9 @@ Unfortunately, Paizo has shown no interest in adapting pre-remaster adventures i
 
 I have good news. 🎵You've got the touch, you've got the power!🎵 I can teach you this power, but it is a complicated process that we need to take step by step.
 
+>IMPORTANT!
+>Looking for the previous guide for Foundry v13 that uses World Scripter? I have migrated that guide to it's own branch, you can find it [here]()
+
 ## Required:
 * [Foundry VTT](https://foundryvtt.com/)
 * [Visual Studio](https://code.visualstudio.com/Download) or a similar program to write code
