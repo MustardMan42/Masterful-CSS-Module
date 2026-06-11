@@ -120,7 +120,7 @@ In this section I will go over the basics of writing a CSS file and the accompan
         font-size: 1.05em; /* using the x.xxem format means that your size changes scale with the default font size set by Foundry, but you can set this value to the height in pixels you want (e.g. 12px) or the percentage of the base font height (e.g. 105%) */
       }
       ```
-* That code will apply some styling to make a box like the read out text sections from a Pathfinder adventure. If you want to increase the accuracy of the look, change the `font-family` from `'Gelasio'` to `'Good OT'`. Keep in mind you will need to have the Good OT font installed in order for that to work. For more info about getting that and other fonts see [Part 2, Step 2](#step-2-gather-fonts).
+* That code will apply some styling to make a box like the read out text sections from a Pathfinder adventure. If you want to increase the accuracy of the look, change the `font-family` from `'Gelasio'` to `'Good OT'`. Keep in mind you will need to have the Good OT font installed in order for that to work. For more info about getting that and other fonts see [Part 3, Step 2](#step-2-gather-fonts).
 * Save your .css file and overwrite it to your Foundry directory, and then reload Foundry using F5. 
 * Now open the journal you are editing, open the HTML view, and copy and paste the following code into the HTML editor:
     * ```html
@@ -319,7 +319,7 @@ Now that you have the fonts and colors, you really have everything you need to s
 
 ## Step 3: Write a list of Variables for Adventure fonts and colors
 * Next we will list some variables. These make it so that if you make a mistake you only need to correct that mistake in one location, instead of all over the code.
-* Create a new rule for elements with the class we gave to those journals, in our case `.tio`. Make sure you include the period. Under this class we are going to name a variable and give it a value, in this case we want to get the color of the read out text. We will call it `--tio-green-darkest`, and for the value use the hex code of the color. See [Part 2, step 3](#step-3-getting-exact-colors) for more info on gathering color hexcodes.
+* Create a new rule for elements with the class we gave to those journals, in our case `.tio`. Make sure you include the period. Under this class we are going to name a variable and give it a value, in this case we want to get the color of the read out text. We will call it `--tio-green-darkest`, and for the value use the hex code of the color. See [Part 3, step 3](#step-3-getting-exact-colors) for more info on gathering color hexcodes.
    * ```css
      .tio {
         --tio-green-darkest: #004316;
@@ -340,7 +340,7 @@ Now that you have the fonts and colors, you really have everything you need to s
      ```
 
 ## Step 4: Write Style rules specific to the adventure
-* Next we are going to write some new rules to use this variable, starting with the Read Out box from [Part 1, step 2](#step-2-read-out-box) We will need one for the \<div> and one for paragraphs (\<p>) inside the \<div>. Each rule needs to start with the class we assigned earlier, in our case .tio. You can copy the border rules we made earlier and remove the listed variable and replace it with `#000`, which is just black. Additionally, we will make a similar rule to change the color of the paragraph text to our new variable `--tio-red-light`. Using a variable instead of a hex code is as simple as typing `var()` and copying and pasting the name of the variable into the parentheses.
+* Next we are going to write some new rules to use this variable, starting with the Read Out box from [Part 2, step 2](#step-2-read-out-box) We will need one for the \<div> and one for paragraphs (\<p>) inside the \<div>. Each rule needs to start with the class we assigned earlier, in our case .tio. You can copy the border rules we made earlier and remove the listed variable and replace it with `#000`, which is just black. Additionally, we will make a similar rule to change the color of the paragraph text to our new variable `--tio-red-light`. Using a variable instead of a hex code is as simple as typing `var()` and copying and pasting the name of the variable into the parentheses.
    * ```css
      .tio div.read-out {
         border-top: 1px ridge #000;
