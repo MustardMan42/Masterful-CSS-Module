@@ -299,7 +299,7 @@ Now that you have the fonts and colors, you really have everything you need to s
 * Open your .mjs file in Visual Studio and add the following code.
   * ```javascript
     Hooks.on("renderJournalEntrySheet", (app) => {
-      if (app.document.getFlag("tutorial", "isXXX")) { //Change the "tutorial" to the lowercase and hyphenated id at the top of your module.json
+      if (app.document.getFlag("terrific-tutorial", "isXXX")) { //Change the "terrific-tutorial" to the lowercase and hyphenated id at the top of your module.json
         app.element?.classList?.add("xxx"); //Change the "xxx" and "XXX" to the abbreviation for the title of the adventure you are adapting, ex. Fists of the Ruby Phoenix becomes FOTRP and fotrp
       }
     });
@@ -314,7 +314,7 @@ Now that you have the fonts and colors, you really have everything you need to s
 * Paste the following code inside the “flags” bracket. You will need to change the "tutorial" to the id of your module from the top of your module.json file, and the XXX to the abbreviation you wrote for your .mjs file. Do this to each .json and save each one in your “Current” folder.
     * ```json
        
-          "tutorial": {
+          "terrific-tutorial": {
             "isXXX": true
           }
         
