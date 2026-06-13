@@ -88,10 +88,11 @@ While my module is perfectly fine to get started with, I can't write all the CSS
               link.id   = cssId;
               link.rel  = 'stylesheet';
               link.type = 'text/css';
-              link.href = 'modules/tutorial/styles/tutorial.css'; //Put file path here!
+              link.href = 'modules/terrific-tutorial/styles/tutorial.css'; //Put file path here!
               link.media = 'all';
               head.appendChild(link);
             }
+         console.log("Terrific Tutorial Module is locked, loaded and ready to roll out!");
        ```
  * Now we can start to move any existing journals, scenes, actors, and items into your module.
    * Reload Foundry and open up the world with the journals you are going to be styling.
