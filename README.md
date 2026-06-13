@@ -73,9 +73,7 @@ While my module is perfectly fine to get started with, I can't write all the CSS
  * If you are planning on having multiple styles, as in you have multiple adventures in a single module and some rules might be universal but others should only be applied to specific adventures you choose, you need to add a line of code that directs Foundry to a .mjs file we will create shortly. That line of code looks like this. You will need to change the file path to match the location and name of your .mjs file in your directory.
    * ```json
      "esmodules": [
-         {
-           "tutorial.mjs"
-         }
+         "tutorial.mjs"
        ],
      ```
    * A .mjs file is a file that contains javascript code. In our case we are including this code to apply the .css file, later on we will add new lines of code to apply a class to journal entries that we will flag for each adventure. In Visual Studio press CTRL + N to open a new text file. You will want to copy the code below into your new file, and be sure that you set the module_ID and the file path to your css file correctly.
