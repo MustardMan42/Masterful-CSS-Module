@@ -92,6 +92,7 @@ While my module is perfectly fine to get started with, I can't write all the CSS
             link.media = 'all';
             head.appendChild(link);
           }
+       
        console.log("Terrific Tutorial Module is locked, loaded and ready to roll out!");
        ```
  * Now we can start to move any existing journals, scenes, actors, and items into your module.
