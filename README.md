@@ -78,7 +78,7 @@ While my module is perfectly fine to get started with, I can't write all the CSS
      ```
    * A .mjs file is a file that contains javascript code. In our case we are including this code to apply the .css file, later on we will add new lines of code to apply a class to journal entries that we will flag for each adventure. In Visual Studio press CTRL + N to open a new text file. You will want to copy the code below into your new file, and be sure that you set the module_ID and the file path to your css file correctly.
      * ```javascript
-         const MODULE_ID = "tutorial"; //Change this to the lowercase id at the top of your module.json
+         const MODULE_ID = "terrific-tutorial"; //Change this to the lowercase id at the top of your module.json
 
          var cssId = 'myCss'; //I adapted this code from Reddit user u/lady_of_luck, without their post none of my exploration into this topic would have been possible
             if (!document.getElementById(cssId))
