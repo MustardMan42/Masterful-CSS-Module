@@ -302,22 +302,14 @@ Now that you have the fonts and colors, you really have everything you need to s
       });
     }): //This code is courtesy of u/Freeze014
     ```
+  * Reload Foundry after saving your .mjs file
 
-## Step 2: Adding Flags to Journals
-* Next you will want to export the .json files of the Journal Entries you are including in this adventure. At this point you should make a copy of those files **and never delete it**. It is easy to overwrite the wrong journal and lose hours of work when importing these files back into Foundry. I recommend having one folder for backup and one folder for current.
->[!CAUTION]
->I am NOT kidding, you should make a back up of any .json file before you import them back into Foundry, ESPECIALLY if you've already started editing the text
-* With the exported .json files, open each .json file in Visual Studio
-* We need to add a very small bit of code to each file. We are placing this code under the main “flags” entry, be sure not to put it under one of the individual page. The easiest way to get to the right spot is to collapse the “pages” range on the left, and the correct “flags” section should be right after the “pages”.
-* Paste the following code inside the “flags” bracket. You will need to change the "tutorial" to the id of your module from the top of your module.json file, and the XXX to the abbreviation you wrote for your .mjs file. Do this to each .json and save each one in your “Current” folder.
-    * ```json
-       
-          "terrific-tutorial": {
-            "isXXX": true
-          }
-        
-      ```
-* In Foundry, import the .json files for each respective journal, being extremely careful that you choose the correct file for each journal.
+## Step 2: Changing the Sheet for each Journal in Foundry
+* Next you will want to change the Journals in Foundry to the new Sheet we've just registered. Open up a journal, and in the top-right corner click the "three dots" (⁝) icon to edit the settings.
+* Click the gear option in the menu that says "configure sheet"
+* Under Document click the dropdown for "This Sheet", and select the dropdown entry that matches the label from your .mjs code above ("Troubles in Otari") in my case
+* Press Save Sheet Configuration
+* Repeat this step for each journal used by the adventure
 
 ## Step 3: Write a list of Variables for Adventure fonts and colors
 * Next we will list some variables. These make it so that if you make a mistake you only need to correct that mistake in one location, instead of all over the code.
