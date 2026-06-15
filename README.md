@@ -286,16 +286,16 @@ Now that you have the fonts and colors, you really have everything you need to s
 ## Step 1: Adjusting your .mjs file
 * Open your .mjs file in Visual Studio and add the following code.
   * ```javascript
-    class XXXJournalSheet extends foundry.appl ications.sheets.journal.JournalEntrySheet {
+    class Tio extends foundry.appl ications.sheets.journal.JournalEntrySheet { //This code is courtesy of u/Freeze014
         constructor(doc, options) {
           super(doc, options);
-          this.options.classes.push("xxx-style");
+          this.options.classes.push("tio"); //Replace "tio" with the lowercase abbreviation for the adventure you are adapting
         }
     }
     Hooks.on("init", () => {
-      foundry.applications.apps.DocumentSheetCo nfig.registerSheet(JournalEntry, MODULE_ID, XXXJournalSheet, {
+      foundry.applications.apps.DocumentSheetConfig.registerSheet(JournalEntry, MODULE_ID, Tio, { //
         types: ["base"],
-        label: "Some Journal Sheet name",
+        label: "Troubles in Otari", //Replace "Troubles in Otari" with the name of the adventure you are adapting
         makeDefault: false,
         canBeDefault: true,
         canConfigure: true
