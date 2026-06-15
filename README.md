@@ -286,11 +286,21 @@ Now that you have the fonts and colors, you really have everything you need to s
 ## Step 1: Adjusting your .mjs file
 * Open your .mjs file in Visual Studio and add the following code.
   * ```javascript
-    Hooks.on("renderJournalEntrySheet", (app) => {
-      if (app.document.getFlag("terrific-tutorial", "isXXX")) { //Change the "terrific-tutorial" to the lowercase and hyphenated id at the top of your module.json
-        app.element?.classList?.add("xxx"); //Change the "xxx" and "XXX" to the abbreviation for the title of the adventure you are adapting, ex. Fists of the Ruby Phoenix becomes FOTRP and fotrp
-      }
-    });
+    class XXXJournalSheet extends foundry.appl ications.sheets.journal.JournalEntrySheet {
+        constructor(doc, options) {
+          super(doc, options);
+          this.options.classes.push("xxx-style");
+        }
+    }
+    Hooks.on("init", () => {
+      foundry.applications.apps.DocumentSheetCo nfig.registerSheet(JournalEntry, MODULE_ID, XXXJournalSheet, {
+        types: ["base"],
+        label: "Some Journal Sheet name",
+        makeDefault: false,
+        canBeDefault: true,
+        canConfigure: true
+      });
+    }):
     ```
 
 ## Step 2: Adding Flags to Journals
