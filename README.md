@@ -70,26 +70,16 @@ While my module is perfectly fine to get started with, I can't write all the CSS
      ```
  * If you are planning on having multiple styles, as in you have multiple adventures in a single module and some rules might be universal but others should only be applied to specific adventures you choose, you need to add a line of code that directs Foundry to a .mjs file we will create shortly. That line of code looks like this. You will need to change the file path to match the location and name of your .mjs file in your directory.
    * ```json
+     "styles": [
+         "styles/tutorial.css"
+       ],
      "esmodules": [
          "tutorial.mjs"
        ],
      ```
-   * A .mjs file is a file that contains javascript code. In our case we are including this code to apply the .css file, later on we will add new lines of code to apply a class to journal entries that we will flag for each adventure. In Visual Studio press CTRL + N to open a new text file. You will want to copy the code below into your new file, and be sure that you set the module_ID and the file path to your css file correctly.
+   * A .mjs file is a file that contains javascript code. In our case, we are including this code confirm that the module has loaded, later on we will add new lines of code to apply a class to journal entries that we will flag for each adventure. In Visual Studio press CTRL + N to open a new text file. You will want to copy the code below into your new file, and be sure that you set the module_ID correctly.
      * ```javascript
        const MODULE_ID = "terrific-tutorial"; //Change this to the lowercase id at the top of your module.json
-
-       var cssId = 'myCss'; //I adapted this code from Reddit user u/lady_of_luck, without their post none of my exploration into this topic would have been possible
-          if (!document.getElementById(cssId))
-          {
-            var head  = document.getElementsByTagName('head')[0];
-            var link  = document.createElement('link');
-            link.id   = cssId;
-            link.rel  = 'stylesheet';
-            link.type = 'text/css';
-            link.href = 'modules/terrific-tutorial/styles/tutorial.css'; //Put file path here!
-            link.media = 'all';
-            head.appendChild(link);
-          }
        
        console.log("Terrific Tutorial Module is locked, loaded and ready to roll out!");
        ```
