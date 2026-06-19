@@ -25,14 +25,16 @@ I have good news. 🎵You've got the touch, you've got the power!🎵 I can teac
 There are two ways I am aware of to inject a .css file into Foundry, one is to use a module like World Scripter and the other is to create your own module. As of today (May 2026), v14 is the newest version of Foundry and the World Scripter module is not updated to v14, so that is not currently a viable option. That means you can either make your own module, or you can use mine. Being the benevolent internet citizen that I am, I created a simple module that you can use, although I think you should consider making your own module (see [here](#option-2-making-your-own-module)). Installing my module is easy and fast, as fast as installing any other module for Foundry. This version supports Foundry version v14 and v13, I don't gurantee support for earlier or later versions of Foundry.
 
 ## Option 1: Install the Masterful CSS Module in Foundry
- * Copy [this link to the 1.2.0 module.json file](https://github.com/MustardMan42/Masterful-CSS-Module/releases/download/1.2.0/module.json).
- * In Foundry, open your Add-on Modules page and click the "Install Module" button.
- * At the bottom of the installation window, paste the link (above) in the Manifest URL box.
- * Click the "Install" button.
- * Open a World of your choosing in the Game Worlds tab in Foundry.
- * In the Settings, click the Manage Modules button under Game Settings.
- * Click the checkbox next to Masterful CSS Module and then click Save Module Settings. The world should then reload.
- * Under the compendiums tab, click the compendium called Magnificent Examples by MustardMan42, and import the journals from that compendium. Those journals contain a (very basic) local version of this text guide, an HTML Examples journal with html code for quick copying, and a Letter Handouts journal pre-styled to look like a letter your players found.
+ 1. Copy [this link to the 1.2.0 module.json file](https://github.com/MustardMan42/Masterful-CSS-Module/releases/download/1.2.0/module.json).
+ 2. In Foundry, open your Add-on Modules page and click the "Install Module" button.
+ 3. At the bottom of the installation window, paste the link (above) in the Manifest URL box.
+ 4. Click the "Install" button.
+ 5. Open a World of your choosing in the Game Worlds tab in Foundry.
+ 6. In the Settings, click the Manage Modules button under Game Settings.
+ 7. Click the checkbox next to Masterful CSS Module and then click Save Module Settings. The world should then reload.
+ 8. Under the compendiums tab, click the compendium called Magnificent Examples by MustardMan42, and import the journals from that compendium. Those journals contain a (very basic) local version of this text guide, an HTML Examples journal with html code for quick copying, and a Letter Handouts journal pre-styled to look like a letter your players found.
+
+With this module installed, you have a basic .css file injected and you can edit that .css file as you please. You also have the journal examples I gave you, which demonstrate most of the techniques from the rest of this guide.
 
 ## Option 2: Making Your Own Module
 While my module is perfectly fine to get started with, I can't write all the CSS rules you will want to use. What's more, if you use my module and start writing your own rules your changes may get wiped if the module is ever updated. It is safer to create your own module and use mine as an example, which is what the following steps will teach you how to do.
