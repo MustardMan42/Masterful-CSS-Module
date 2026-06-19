@@ -46,8 +46,8 @@ While my module is perfectly fine to get started with, I can't write all the CSS
  * For personal use I prefer one module that contains all the adventures that I’ve adapted to Foundry. If I were to distribute the module to others I would prefer one module per adventure, but I would want to create some sort of system to standardize and document any sweeping changes across all modules.
 
 ### Step 2: Setting Up A Module
-* Once you've decided how many modules you are making you will need to create the module(s) using Foundry.
-* In the modules page in your Foundry set up page, click the gear icon to open up a form to start inputting the module information. There is [an article](https://foundryvtt.com/article/module-maker/) in the Foundry Knowledge Base that explains these options in detail as well.
+Once you've decided how many modules you are making you will need to create the module(s) using Foundry.
+ 1. In the modules page in your Foundry set up page, click the gear icon to open up a form to start inputting the module information. There is [an article](https://foundryvtt.com/article/module-maker/) in the Foundry Knowledge Base that explains these options in detail as well.
    * Name the module anything you’d like. The package identifier should populate automatically.
    * Set the package version. If you are doing this module as part of a large project you may have a real system for the version numbers, especially if this module will be available to the public. Otherwise you can leave it at 1.
    * You don’t need a package URL, but if you are hosting your module on github or another file sharing service you can put the link there. That is important again for if you are selling or giving away your module to other people.
@@ -56,8 +56,8 @@ While my module is perfectly fine to get started with, I can't write all the CSS
    * Create a compendium pack. You will need to write the name in lowercase and separated by hyphens. I like using the Adventure document type, but if you are only including journals or only listing maps you could use journals or scenes.
    * If your module is only going to be compatible with one game system select that system from the list of systems you have installed.
    * Once you press the "Create Module" button at the bottom of the window, Foundry will create the folder in the module directory and a module.json file in that directory.
-* If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later.
-* With your module created you will need to set up some additional folders to stay organized.
+ 2. If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later.
+ 3. With your module created you will need to set up some additional folders to stay organized.
    * In the folder for your module you will want to create at least an assets folder and a styles folder. If you are planning on having a lot of script files you could create a scripts folder.
    * Inside your styles folder you will want to make a fonts subfolder, this is where all your fonts for this module should live. In the styles folder itself you will put your .css file.
      * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
