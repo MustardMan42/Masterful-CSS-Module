@@ -162,46 +162,47 @@ Look at our previous CSS rule to see these techniques in action:
 I recommend using [W3Schools](https://www.w3schools.com) if you ever have questions about an HTML element or a CSS style rule, I’ve used that website countless times when I wanted to find out if an idea I had was possible.
 
 ## Step 3: Embedding an Image
-* Now that you’ve written your first style rule, let’s write another. We are going to target a way to insert images into journal pages in a way that they don't take up the whole page. This is useful for portraits of NPCs, pictures of magic items, or pictures of faction symbols. We are going to use the \<figure>, \<figcaption>, and \<img> elements to accomplish this. The class we will give to these elements is "insert".
-* Our first set of rules will target the \<figure> container, but we only want it to target \<figure> elements that we've assigned the "insert" class. To achieve this our selector will be `figure.insert {}`.
-    * Set the `float` property to a value of `right`. This will make the the \<figure> container (and any items inside) appear on the right side of any other elements like paragraphs of text.
-    * Set the `max-width` property to a value of `33%`. You can change that percentage value to be higher or lower, as written this keeps the \<figure> from taking up more than a third of the page.
-    * Finally I like setting the `margin` property to a value of `0` so that the text surrounding the figure gets close to the image. You could even set the margin to a negative value if you really wanted the text to crowd in, but you would risk the text obscuring the image.
-* Our next set of rules is for \<figcaption> elements that are inside of a \<figure> that has the class "insert". To achieve this our selector will be `figure.insert figcaption {}`. Foundry already makes the \<figcaption> text bold, italicizes it and centers the text inside of the container. For my purposes I want to change the font, make the text all capital letters, and undo the italicization:
-    * Set the `font-family` to `'Gelasio'`, you can change this to any font you want that is installed in Foundry.
-    * Set `text-transform` to `uppercase` to make any text appear to be capitalized, even if you didn't type it that way.
-    * Set the `font-style` to `normal`, which removes the italicization.
-* Last but not least I want one rule that targets images inside of the \<figure>. To achieve this our selector will be `figure.insert img {}`. I want to remove the border that Foundry places around images by default
-    * Set `border` to `none` or `0`.
-* By the end your code should look something like this:
-    * ```css
-      figure.insert {
-         float: right;
-         max-width: 33%;
-         margin: 0;
-      }
-      figure.insert figcaption {
-         font-family: 'Gelasio';
-         text-transform: uppercase;
-         font-style: normal;
-      }
-      figure.insert img {
-         border: 0;
-      }
-      ```
-* Save your CSS file and overwrite your existing CSS file in your Foundry directory. Now all we need to do is write the HTML code in Foundry to match our CSS file.
+Now that you’ve written your first style rule, let’s write another.
+1. We are going to target a way to insert images into journal pages in a way that they don't take up the whole page. This is useful for portraits of NPCs, pictures of magic items, or pictures of faction symbols. We are going to use the \<figure>, \<figcaption>, and \<img> elements to accomplish this. The class we will give to these elements is "insert".
+2. Our first set of rules will target the \<figure> container, but we only want it to target \<figure> elements that we've assigned the "insert" class. To achieve this our selector will be `figure.insert {}`.
+   * Set the `float` property to a value of `right`. This will make the the \<figure> container (and any items inside) appear on the right side of any other elements like paragraphs of text.
+   * Set the `max-width` property to a value of `33%`. You can change that percentage value to be higher or lower, as written this keeps the \<figure> from taking up more than a third of the page.
+   * Finally I like setting the `margin` property to a value of `0` so that the text surrounding the figure gets close to the image. You could even set the margin to a negative value if you really wanted the text to crowd in, but you would risk the text obscuring the image.
+3. Our next set of rules is for \<figcaption> elements that are inside of a \<figure> that has the class "insert". To achieve this our selector will be `figure.insert figcaption {}`. Foundry already makes the \<figcaption> text bold, italicizes it and centers the text inside of the container. For my purposes I want to change the font, make the text all capital letters, and undo the italicization:
+   * Set the `font-family` to `'Gelasio'`, you can change this to any font you want that is installed in Foundry.
+   * Set `text-transform` to `uppercase` to make any text appear to be capitalized, even if you didn't type it that way.
+   * Set the `font-style` to `normal`, which removes the italicization.
+4. Last but not least I want one rule that targets images inside of the \<figure>. To achieve this our selector will be `figure.insert img {}`. I want to remove the border that Foundry places around images by default
+   * Set `border` to `none` or `0`.
+5. By the end your code should look something like this:
+   * ```css
+     figure.insert {
+        float: right;
+        max-width: 33%;
+        margin: 0;
+     }
+     figure.insert figcaption {
+        font-family: 'Gelasio';
+        text-transform: uppercase;
+        font-style: normal;
+     }
+     figure.insert img {
+        border: 0;
+     }
+     ```
+6. Save your CSS file and overwrite your existing CSS file in your Foundry directory. Now all we need to do is write the HTML code in Foundry to match our CSS file.
    * To start I suggest inserting an image at the top of your journal page using Foundry's default text editor, that way you can find where the image is in your directory.
    * Open the HTML view and create a \<figure> and give it the class “insert”. Giving the \<figure> container a class means that all elements inside the container will also have that class.
    * Inside the \<figure>, you can copy and paste the \<img> you inserted at the top of the page.
    * Then we add a new \<figcaption> element below the image and type out the title of the image.
    * You should have some HTML code that looks similar to the following:
-      * ```html
-        <figure class="insert">
-           <img src="icons/vtt-512.png"> <!-- You should replace the file path in quotes with the path for the image you want to use -->
-           <figcaption>A Useful Caption</figcaption>
-        </figure>
-        ```
-* Once you click the save icon your journal page should have the image displayed to the right of your body text and a nice little caption describing the image.
+     * ```html
+       <figure class="insert">
+          <img src="icons/vtt-512.png"> <!-- You should replace the file path in quotes with the path for the image you want to use -->
+          <figcaption>A Useful Caption</figcaption>
+       </figure>
+       ```
+7. Once you click the save icon your journal page should have the image displayed to the right of your body text and a nice little caption describing the image.
 
 ## Step 4: Side Box
 * There's one more extremely common element from a Pathfinder adventure that you will come across, the side box. To recreate this using CSS you will need to combine some properties from the [Read Out](#step-2-read-out-box) and [Embedded Image](#step-3-embedding-an-image) rules we've already written. We want to copy the `float` and `max-width` elements from the Insert, and much of the style from the Read Out box.
