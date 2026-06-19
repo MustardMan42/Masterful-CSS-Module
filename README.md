@@ -25,7 +25,7 @@ I have good news. 🎵You've got the touch, you've got the power!🎵 I can teac
 There are two ways I am aware of to inject a .css file into Foundry, one is to use a module like World Scripter and the other is to create your own module. As of today (May 2026), v14 is the newest version of Foundry and the World Scripter module is not updated to v14, so that is not currently a viable option. That means you can either make your own module, or you can use mine. Being the benevolent internet citizen that I am, I created a simple module that you can use, although I think you should consider making your own module (see [here](#option-2-making-your-own-module)). Installing my module is easy and fast, as fast as installing any other module for Foundry. This version only supports Foundry version v14, I don't gurantee support for earlier or later versions of Foundry.
 
 ## Option 1: Install the Masterful CSS Module in Foundry
- * Copy [this link to the 1.1.0 module.json file](https://github.com/MustardMan42/Masterful-CSS-Module/releases/download/1.1.0/module.json)
+ * Copy [this link to the 1.2.0 module.json file](https://github.com/MustardMan42/Masterful-CSS-Module/releases/download/1.2.0/module.json)
  * In Foundry, open your Add-on Modules page and click the "Install Module" button
  * At the bottom of the installation window, paste the link (above) in the Manifest URL box
  * Click the "Install" button
