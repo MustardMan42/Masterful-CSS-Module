@@ -170,7 +170,7 @@ Since you used my code wholesale for your first rule, I'll break down the proces
 2. Our next set of rules is for \<figcaption> elements that are inside of a \<figure> that has the class "insert". To achieve this our selector will be `figure.insert figcaption {}`. Foundry already makes the \<figcaption> text bold, italicizes it and centers the text inside of the container. For my purposes I want to change the font, make the text all capital letters, and undo the italicization:
    * Set the `font-family: ` to `'Gelasio';`, you can change this to any font you want that is installed in Foundry.
    * Set `text-transform: ` to `uppercase;` to make any text appear to be capitalized, even if you didn't type it that way.
-   * Set the `font-style: ` to `normal;`, which removes the italicization.
+   * Set the `font-style: ` to `unset;`, which removes the italicization.
 3. Last but not least I want one rule that targets images inside of the \<figure>. To achieve this our selector will be `figure.insert img {}`. I want to remove the border that Foundry places around images by default
    * Set `border: ` to `none;` or `0;`.
 4. By the end your code should look something like this:
@@ -183,7 +183,7 @@ Since you used my code wholesale for your first rule, I'll break down the proces
      figure.insert figcaption {
         font-family: 'Gelasio';
         text-transform: uppercase;
-        font-style: normal;
+        font-style: unset;
      }
      figure.insert img {
         border: 0;
