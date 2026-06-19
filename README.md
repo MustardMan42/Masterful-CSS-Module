@@ -305,7 +305,7 @@ Now that you have the fonts and colors, you really have everything you need to s
   * Reload Foundry after saving your .mjs file
 
 ## Step 2: Changing the Sheet for each Journal in Foundry
-* Next you will want to change the Journals in Foundry to the new Sheet we've just registered. Open up a journal, and in the top-right corner click the "three dots" (⁝) icon to edit the settings.
+* Next you will want to change the Journals in Foundry to the new Sheet we've just registered. Open up a journal, and in the top-right corner click the "three dots" icon ( ⁝ ) to edit the settings.
 * Click the gear option in the menu that says "configure sheet"
 * Under Document click the dropdown for "This Sheet", and select the dropdown entry that matches the label from your .mjs code above ("Troubles in Otari") in my case
 * Press Save Sheet Configuration
