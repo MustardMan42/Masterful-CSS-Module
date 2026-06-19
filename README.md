@@ -77,7 +77,7 @@ While my module is perfectly fine to get started with, I can't write all the CSS
          "tutorial.mjs"
        ],
      ```
-   * A .mjs file is a file that contains javascript code. In our case, we are including this code confirm that the module has loaded, later on [Part 4, Step 1](#step-1-adjusting-your-.mjs-file) we will add new lines of code to apply a class to journal entries that we will flag for each adventure. In Visual Studio press CTRL + N to open a new text file. You will want to copy the code below into your new file, and be sure that you set the module_ID correctly.
+   * A .mjs file is a file that contains javascript code. In our case, we are including this code confirm that the module has loaded, later on [(see Part 4, Step 1)](#step-1-adjusting-your-.mjs-file) we will add new lines of code to apply a class to journal entries that we will flag for each adventure. In Visual Studio press CTRL + N to open a new text file. You will want to copy the code below into your new file, and be sure that you set the module_ID correctly.
      * ```javascript
        const MODULE_ID = "terrific-tutorial"; //Change this to the lowercase id at the top of your module.json
        
