@@ -287,10 +287,10 @@ Now that you have the fonts and colors, you really have everything you need to s
 * Open your .mjs file in Visual Studio and add the following code.
   * ```javascript
     class TIO extends foundry.applications.sheets.journal.JournalEntrySheet { //Replace "TIO" with the uppercase abbreviation for the adventure you are adapting
-        constructor(doc, options) {
-          super(doc, options);
-          this.options.classes.push("tio"); //Replace "tio" with the lowercase abbreviation for the adventure you are adapting
-        }
+      constructor(doc, options) {
+        super(doc, options);
+        this.options.classes.push("tio"); //Replace "tio" with the lowercase abbreviation for the adventure you are adapting
+      }
     }
     Hooks.on("init", () => {
       foundry.applications.apps.DocumentSheetConfig.registerSheet(JournalEntry, MODULE_ID, TIO, { //Replace "TIO" with the uppercase abbreviation for the adventure you are adapting
@@ -300,7 +300,7 @@ Now that you have the fonts and colors, you really have everything you need to s
         canBeDefault: true,
         canConfigure: true
       });
-    }): //This code is courtesy of u/Freeze014
+    }); //This code is courtesy of u/Freeze014
     ```
   * Reload Foundry after saving your .mjs file
 
