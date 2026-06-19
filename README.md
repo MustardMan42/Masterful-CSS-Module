@@ -149,12 +149,12 @@ When writing rules in CSS, the first line is called the selector. The selector u
 CSS indicates items of a specific class using a period, and the text following the period should match the class name exactly, like so: `div.read-out`. You can add further specificity by adding other selectors separated by a space. Each element added this way will expect to be nested further beneath HTML elements, so `div.read-out p` will not apply to \<p> elements unless they nested are inside of a `<div class="read-out">`. You can also add additional selectors with commas, so if you want \<h2> and \<h3> elements to be styled the exact same you could write a selector like `h2, h3`.
 
 Look at our previous CSS rule to see these techniques in action:
-* ```css
-   div.read-out p { /* This selector targets only <p> elements that are within a <div> container that has the class "read-out" */
-     font-family: 'Roboto Condensed'; /* This declaration has set the value 'Roboto Condensed' to the property font-family */
-     font-size: 1.05em; /* Similarly the font-size property has been set to a value of 1.05em, or about 5% larger than the standard font size */
-   }
-  ```
+```css
+div.read-out p { /* This selector targets only <p> elements that are within a <div> container that has the class "read-out" */
+ font-family: 'Roboto Condensed'; /* This declaration has set the value 'Roboto Condensed' to the property font-family */
+ font-size: 1.05em; /* Similarly the font-size property has been set to a value of 1.05em, or about 5% larger than the standard font size */
+}
+```
 
 >[!NOTE]
 >There are some properties like `margin` and `border` that can accept multiple values. `margin: 0` Sets the margin to 0 on all sides. `margin: 0 1px` will set the top and bottom margins to 0, but set the left and right margins to 1px. With more than two values the margin will be set in clockwise order, meaning `margin: 0 1px 2px 3px` will set the top margin to 0, the right margin to 1px, the bottom margin to 2px, and the left margin to 3px. Most elements that accept multiple values will have multiple variations, for example you could set only the left margin by using the property `margin-left`. Once again hovering your cursor over a property in Visual Studio is your best friend, as the syntax that property will accept for values will be suggested.
@@ -162,12 +162,11 @@ Look at our previous CSS rule to see these techniques in action:
 I recommend using [W3Schools](https://www.w3schools.com) if you ever have questions about an HTML element or a CSS style rule, I’ve used that website countless times when I wanted to find out if an idea I had was possible.
 
 ## Step 3: Embedding an Image
-Now that you’ve written your first style rule, let’s write another.
-1. We are going to target a way to insert images into journal pages in a way that they don't take up the whole page. This is useful for portraits of NPCs, pictures of magic items, or pictures of faction symbols. We are going to use the \<figure>, \<figcaption>, and \<img> elements to accomplish this. The class we will give to these elements is "insert".
-2. Our first set of rules will target the \<figure> container, but we only want it to target \<figure> elements that we've assigned the "insert" class. To achieve this our selector will be `figure.insert {}`.
-   * Set the `float` property to a value of `right`. This will make the the \<figure> container (and any items inside) appear on the right side of any other elements like paragraphs of text.
-   * Set the `max-width` property to a value of `33%`. You can change that percentage value to be higher or lower, as written this keeps the \<figure> from taking up more than a third of the page.
-   * Finally I like setting the `margin` property to a value of `0` so that the text surrounding the figure gets close to the image. You could even set the margin to a negative value if you really wanted the text to crowd in, but you would risk the text obscuring the image.
+Now that you’ve written your first style rule, let’s write another. We are going to target a way to insert images into journal pages in a way that they don't take up the whole page. This is useful for portraits of NPCs, pictures of magic items, or pictures of faction symbols. 1. We are going to use the \<figure>, \<figcaption>, and \<img> elements to accomplish this. The class we will give to these elements is "insert".
+2. Our first set of rules will target the \<figure> container, but we only want it to target \<figure> elements that we've assigned the "insert" class. Start a new rule in your .css file with the line `figure.insert {}`. Press enter inside the curly bracket to start writing properties and setting values.
+   * Inside this rule, write `float: ` (a property) and then `right` (a value). This will make the the \<figure> container (and any items inside) appear on the right side of any other elements like paragraphs of text.
+   * Write a `max-width: ` property and set the value to `33%`. You can change that percentage value to be higher or lower, as written this keeps the \<figure> from taking up more than a third of the page.
+   * Finally I like setting a `margin` property to a value of `0` so that the text surrounding the figure gets close to the image. You could even set the margin to a negative value if you really wanted the text to crowd in, but you would risk the text obscuring the image.
 3. Our next set of rules is for \<figcaption> elements that are inside of a \<figure> that has the class "insert". To achieve this our selector will be `figure.insert figcaption {}`. Foundry already makes the \<figcaption> text bold, italicizes it and centers the text inside of the container. For my purposes I want to change the font, make the text all capital letters, and undo the italicization:
    * Set the `font-family` to `'Gelasio'`, you can change this to any font you want that is installed in Foundry.
    * Set `text-transform` to `uppercase` to make any text appear to be capitalized, even if you didn't type it that way.
@@ -205,7 +204,8 @@ Now that you’ve written your first style rule, let’s write another.
 7. Once you click the save icon your journal page should have the image displayed to the right of your body text and a nice little caption describing the image.
 
 ## Step 4: Side Box
-* There's one more extremely common element from a Pathfinder adventure that you will come across, the side box. To recreate this using CSS you will need to combine some properties from the [Read Out](#step-2-read-out-box) and [Embedded Image](#step-3-embedding-an-image) rules we've already written. We want to copy the `float` and `max-width` elements from the Insert, and much of the style from the Read Out box.
+There's one more extremely common element from a Pathfinder adventure that you will come across, the side box.
+1. To recreate this using CSS you will need to combine some properties from the [Read Out](#step-2-read-out-box) and [Embedded Image](#step-3-embedding-an-image) rules we've already written. We want to copy the `float` and `max-width` elements from the Insert, and much of the style from the Read Out box.
    * ```css
      div.side-box {
         border-left: none;
@@ -239,7 +239,7 @@ Now that you’ve written your first style rule, let’s write another.
            text-align: center;
         }
         ```
-* Once you’ve saved your .css file and overwritten that file in Foundry and reloaded Foundry you are ready to write the code in HTML:
+2. Once you’ve saved your .css file and overwritten that file in Foundry and reloaded Foundry you are ready to write the code in HTML:
    * ```html
      <div class="side-box">
         <p class="header">This is a Title!</p>
@@ -260,7 +260,7 @@ In this section I will go into detail on how to gather fonts and exact colors to
 * It’s certainly possible to make your own .css file without using a module as a guide, but you’ll have to work a lot harder.
 
 ## Step 2: Gather Fonts
-* An additional benefit of having an official module as a guide is that you should have some of the officialy font files available in the module directory. You can copy these files into your own CSS folder. If you want your journal to look as good as possible you will want these font files.
+An additional benefit of having an official module as a guide is that you should have some of the officialy font files available in the module directory. You can copy these files into your own CSS folder. If you want your journal to look as good as possible you will want these font files.
 * Pathfinder 2e typically uses the following fonts:
    * Body text uses Sabon Light Standard Roman (Gelasio is a pretty solid alternative that comes with the Pathfinder 2e system by default).
    * Headings use Good OT Bold (Roboto Condensed Bold is a good alternative).
@@ -268,15 +268,15 @@ In this section I will go into detail on how to gather fonts and exact colors to
    * Headings for items and stat blocks use Good OT Condensed Bold.
    * Specific adventures often have a unique font for top level headings, but you can usually find these out using [fontfinder](https://www.myfonts.com/pages/whatthefont/).
       * I myself have found the title fonts for Crown of the Kobold King (You Are Loved), Troubles in Otari (Alembic Beta) and Headshot the Rot (Roadkill Heavy) using this website.
-* Once you have a font file, place it in your CSS folder, and then install it in Foundry under the core settings. You will want to keep the file path so you can add the fonts to your css file.
-* At the top of your .css file you can list any fonts you plan to use. This directs your style rules to what fonts you mean and where the files are in your directory. Start with “@font-face {”, listing the font-family (the name), the source url (where the file is), and whether the file is an opentype font or truetype. You can determine this by looking at the file format of the font you are using.
-   * ```css
-     /* Custom Fonts */
-     @font-face {
-        font-family: "font-name"; /* Replace the font-name with the name of the font you want to use */
-        src: url("assets/CSS/Fonts/example-font.otf") format('opentype'); /* Change the file path in the url to the correct path for your directory and make sure the format is correct for the file type */
-     }
-     ```
+1. Once you have a font file, place it in your CSS folder, and then install it in Foundry under the core settings. You will want to keep the file path so you can add the fonts to your css file.
+2. At the top of your .css file you can list any fonts you plan to use. This directs your style rules to what fonts you mean and where the files are in your directory. Start with “@font-face {”, listing the font-family (the name), the source url (where the file is), and whether the file is an opentype font or truetype. You can determine this by looking at the file format of the font you are using.
+```css
+/* Custom Fonts */
+@font-face {
+  font-family: "font-name"; /* Replace the font-name with the name of the font you want to use */
+  src: url("assets/CSS/Fonts/example-font.otf") format('opentype'); /* Change the file path in the url to the correct path for your directory and make sure the format is correct for the file type */
+}
+```
 
 ## Step 3: Getting Exact Colors
 1. To find the hexcodes of colors that you want, open the adventure PDF in Firefox, and zoom in on the text you want to get the color of. 
