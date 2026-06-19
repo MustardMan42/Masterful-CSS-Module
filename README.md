@@ -25,14 +25,14 @@ I have good news. 🎵You've got the touch, you've got the power!🎵 I can teac
 There are two ways I am aware of to inject a .css file into Foundry, one is to use a module like World Scripter and the other is to create your own module. As of today (May 2026), v14 is the newest version of Foundry and the World Scripter module is not updated to v14, so that is not currently a viable option. That means you can either make your own module, or you can use mine. Being the benevolent internet citizen that I am, I created a simple module that you can use, although I think you should consider making your own module (see [here](#option-2-making-your-own-module)). Installing my module is easy and fast, as fast as installing any other module for Foundry. This version supports Foundry version v14 and v13, I don't gurantee support for earlier or later versions of Foundry.
 
 ## Option 1: Install the Masterful CSS Module in Foundry
- 1. Copy [this link to the 1.2.0 module.json file](https://github.com/MustardMan42/Masterful-CSS-Module/releases/download/1.2.0/module.json).
- 2. In Foundry, open your Add-on Modules page and click the "Install Module" button.
- 3. At the bottom of the installation window, paste the link (above) in the Manifest URL box.
- 4. Click the "Install" button.
- 5. Open a World of your choosing in the Game Worlds tab in Foundry.
- 6. In the Settings, click the Manage Modules button under Game Settings.
- 7. Click the checkbox next to Masterful CSS Module and then click Save Module Settings. The world should then reload.
- 8. Under the compendiums tab, click the compendium called Magnificent Examples by MustardMan42, and import the journals from that compendium. Those journals contain a (very basic) local version of this text guide, an HTML Examples journal with html code for quick copying, and a Letter Handouts journal pre-styled to look like a letter your players found.
+1. Copy [this link to the 1.2.0 module.json file](https://github.com/MustardMan42/Masterful-CSS-Module/releases/download/1.2.0/module.json).
+2. In Foundry, open your Add-on Modules page and click the "Install Module" button.
+3. At the bottom of the installation window, paste the link (above) in the Manifest URL box.
+4. Click the "Install" button.
+5. Open a World of your choosing in the Game Worlds tab in Foundry.
+6. In the Settings, click the Manage Modules button under Game Settings.
+7. Click the checkbox next to Masterful CSS Module and then click Save Module Settings. The world should then reload.
+8. Under the compendiums tab, click the compendium called Magnificent Examples by MustardMan42, and import the journals from that compendium. Those journals contain a (very basic) local version of this text guide, an HTML Examples journal with html code for quick copying, and a Letter Handouts journal pre-styled to look like a letter your players found.
 
 With this module installed, you have a basic .css file injected and you can edit that .css file as you please. You also have the journal examples I gave you, which demonstrate most of the techniques from the rest of this guide.
 
@@ -47,49 +47,49 @@ While my module is perfectly fine to get started with, I can't write all the CSS
 
 ### Step 2: Setting Up A Module
 Once you've decided how many modules you are making you will need to create the module(s) using Foundry.
- 1. In the modules page in your Foundry set up page, click the gear icon to open up a form to start inputting the module information. There is [an article](https://foundryvtt.com/article/module-maker/) in the Foundry Knowledge Base that explains these options in detail as well.
-    * Name the module anything you’d like. The package identifier should populate automatically.
-    * Set the package version. If you are doing this module as part of a large project you may have a real system for the version numbers, especially if this module will be available to the public. Otherwise you can leave it at 1.
-    * You don’t need a package URL, but if you are hosting your module on github or another file sharing service you can put the link there. That is important again for if you are selling or giving away your module to other people.
-    * You should set the compatibility to the current version of Foundry, if you later upgrade to a new version you will want to change this number later or Foundry will yell at you every time you load the world.
-    * Add author details if you expect to be available to maintain this project for others, otherwise this is unnecessary.
-    * Create a compendium pack. You will need to write the name in lowercase and separated by hyphens. I like using the Adventure document type, but if you are only including journals or only listing maps you could use journals or scenes.
-    * If your module is only going to be compatible with one game system select that system from the list of systems you have installed.
-    * Once you press the "Create Module" button at the bottom of the window, Foundry will create the folder in the module directory and a module.json file in that directory.
- 2. If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later.
- 3. With your module created you will need to set up some additional folders to stay organized.
-    * In the folder for your module you will want to create at least an assets folder and a styles folder. If you are planning on having a lot of script files you could create a scripts folder.
-    * Inside your styles folder you will want to make a fonts subfolder, this is where all your fonts for this module should live. In the styles folder itself you will put your .css file.
-      * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
-    * You can organize your assets folder however you wish, but if you have multiple adventures in one module I recommend having separate folders for each adventure here. As an example, I could have a folder for Troubles in Otari called tio, a folder for Crown of the Kobold King called cotkk, and then a folder called monster core for any pictures of monsters that are going to appear in both adventures. Inside each adventure folder I recommend having a folder for portraits, a folder for tokens, a folder for journal images, and a folder for maps.
+1. In the modules page in your Foundry set up page, click the gear icon to open up a form to start inputting the module information. There is [an article](https://foundryvtt.com/article/module-maker/) in the Foundry Knowledge Base that explains these options in detail as well.
+   * Name the module anything you’d like. The package identifier should populate automatically.
+   * Set the package version. If you are doing this module as part of a large project you may have a real system for the version numbers, especially if this module will be available to the public. Otherwise you can leave it at 1.
+   * You don’t need a package URL, but if you are hosting your module on github or another file sharing service you can put the link there. That is important again for if you are selling or giving away your module to other people.
+   * You should set the compatibility to the current version of Foundry, if you later upgrade to a new version you will want to change this number later or Foundry will yell at you every time you load the world.
+   * Add author details if you expect to be available to maintain this project for others, otherwise this is unnecessary.
+   * Create a compendium pack. You will need to write the name in lowercase and separated by hyphens. I like using the Adventure document type, but if you are only including journals or only listing maps you could use journals or scenes.
+   * If your module is only going to be compatible with one game system select that system from the list of systems you have installed.
+   * Once you press the "Create Module" button at the bottom of the window, Foundry will create the folder in the module directory and a module.json file in that directory.
+2. If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later.
+3. With your module created you will need to set up some additional folders to stay organized.
+   * In the folder for your module you will want to create at least an assets folder and a styles folder. If you are planning on having a lot of script files you could create a scripts folder.
+   * Inside your styles folder you will want to make a fonts subfolder, this is where all your fonts for this module should live. In the styles folder itself you will put your .css file.
+     * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
+   * You can organize your assets folder however you wish, but if you have multiple adventures in one module I recommend having separate folders for each adventure here. As an example, I could have a folder for Troubles in Otari called tio, a folder for Crown of the Kobold King called cotkk, and then a folder called monster core for any pictures of monsters that are going to appear in both adventures. Inside each adventure folder I recommend having a folder for portraits, a folder for tokens, a folder for journal images, and a folder for maps.
 
 ### Step 3: Injecting Your .css File
- * If you are only planning on having one style, as in you have one adventure in this module and none of those style rules will ever need to apply to some other journal, you only need to add a small chunk of code to the module.json that directs Foundry to the css file in your directory. Open the module.json file in Visual Studio and add the code below after the "packs" section. You will need to change the file path to match the location and name of your .css file in your directory.
-   * ```json
-     "styles": [
-         "styles/tutorial.css"
-       ],
-     ```
- * If you are planning on having multiple styles, as in you have multiple adventures in a single module and some rules might be universal but others should only be applied to specific adventures you choose, you need to add a line of code that directs Foundry to a .mjs file we will create shortly. That line of code looks like this. You will need to change the file path to match the location and name of your .mjs file in your directory.
-   * ```json
-     "styles": [
-         "styles/tutorial.css"
-       ],
-     "esmodules": [
-         "tutorial.mjs"
-       ],
-     ```
-   * A .mjs file is a file that contains javascript code. In our case, we are including this code confirm that the module has loaded, later on (see [Part 4, Step 1](#step-1-adjusting-your-mjs-file)) we will add new lines of code to apply a class to journal entries that we will flag for each adventure. In Visual Studio press CTRL + N to open a new text file. You will want to copy the code below into your new file, and be sure that you set the module_ID correctly.
-     * ```javascript
-       const MODULE_ID = "terrific-tutorial"; //Change this to the lowercase id at the top of your module.json
-       
-       console.log("Terrific Tutorial Module is locked, loaded and ready to roll out!");
-       ```
- * Now we can start to move any existing journals, scenes, actors, and items into your module.
-   * Reload Foundry and open up the world with the journals you are going to be styling.
-   * You will need to open the settings for the world and enable your module, which will require another reload.
-   * You should now see in the compendiums tab your compendium, which you can edit if you unlock it.
-   * If you have existing journals, actors, scenes, or items for your adventure(s) (such as from a PDF to Foundry import), you can create an adventure in this compendium and drag and drop the elements from the sidebar to the compendium.
+* If you are only planning on having one style, as in you have one adventure in this module and none of those style rules will ever need to apply to some other journal, you only need to add a small chunk of code to the module.json that directs Foundry to the css file in your directory. Open the module.json file in Visual Studio and add the code below after the "packs" section. You will need to change the file path to match the location and name of your .css file in your directory.
+  * ```json
+    "styles": [
+        "styles/tutorial.css"
+      ],
+    ```
+* If you are planning on having multiple styles, as in you have multiple adventures in a single module and some rules might be universal but others should only be applied to specific adventures you choose, you need to add a line of code that directs Foundry to a .mjs file we will create shortly. That line of code looks like this. You will need to change the file path to match the location and name of your .mjs file in your directory.
+  * ```json
+    "styles": [
+        "styles/tutorial.css"
+      ],
+    "esmodules": [
+        "tutorial.mjs"
+      ],
+    ```
+  * A .mjs file is a file that contains javascript code. In our case, we are including this code confirm that the module has loaded, later on (see [Part 4, Step 1](#step-1-adjusting-your-mjs-file)) we will add new lines of code to apply a class to journal entries that we will flag for each adventure. In Visual Studio press CTRL + N to open a new text file. You will want to copy the code below into your new file, and be sure that you set the module_ID correctly.
+    * ```javascript
+      const MODULE_ID = "terrific-tutorial"; //Change this to the lowercase id at the top of your module.json
+      
+      console.log("Terrific Tutorial Module is locked, loaded and ready to roll out!");
+      ```
+* Now we can start to move any existing journals, scenes, actors, and items into your module.
+  * Reload Foundry and open up the world with the journals you are going to be styling.
+  * You will need to open the settings for the world and enable your module, which will require another reload.
+  * You should now see in the compendiums tab your compendium, which you can edit if you unlock it.
+  * If you have existing journals, actors, scenes, or items for your adventure(s) (such as from a PDF to Foundry import), you can create an adventure in this compendium and drag and drop the elements from the sidebar to the compendium.
 
 Once the journals are inside your compendium, you are ready to actually start writing style rules to make your journals pretty.
 
@@ -279,50 +279,50 @@ In this section I will go into detail on how to gather fonts and exact colors to
      ```
 
 ## Step 3: Getting Exact Colors
-* To find the hexcodes of colors that you want, open the adventure PDF in Firefox, and zoom in on the text you want to get the color of. 
-* Press F12 to pull up the console, and click the eyedropper to find the hex codes of any color you hover over. It’s possible that you can do this in Google Chrome but I couldn’t find a way that was as quick as using Firefox.
-* Record the Hex Code in any text file, eventually you will make a list of colors in your .css file. I keep a journal entry with HTML templates in it, and have a page that shows the different colors that I’ve extracted.
+1. To find the hexcodes of colors that you want, open the adventure PDF in Firefox, and zoom in on the text you want to get the color of. 
+2. Press F12 to pull up the console, and click the eyedropper to find the hex codes of any color you hover over. It’s possible that you can do this in Google Chrome but I couldn’t find a way that was as quick as using Firefox.
+3. Record the Hex Code in any text file, eventually you will make a list of colors in your .css file. I keep a journal entry with HTML templates in it, and have a page that shows the different colors that I’ve extracted.
 
 # Part 4: Adventure Specific Changes
 Now that you have the fonts and colors, you really have everything you need to start sprucing up your journals and make them look like the actual PDFs. For the following part, I will show you how to flag your journals to use only the rules you write for that adventure, and then go over some of the common changes I make to text like headings.
   
 ## Step 1: Adjusting your .mjs file
-* Open your .mjs file in Visual Studio and add the following code:
-  * ```javascript
-    class TIO extends foundry.applications.sheets.journal.JournalEntrySheet { //Replace "TIO" with the uppercase abbreviation for the adventure you are adapting
-      constructor(doc, options) {
-        super(doc, options);
-        this.options.classes.push("tio"); //Replace "tio" with the lowercase abbreviation for the adventure you are adapting
-      }
-    }
-    Hooks.on("init", () => {
-      foundry.applications.apps.DocumentSheetConfig.registerSheet(JournalEntry, MODULE_ID, TIO, { //Replace "TIO" with the uppercase abbreviation for the adventure you are adapting
-        types: ["base"],
-        label: "Troubles in Otari", //Replace "Troubles in Otari" with the name of the adventure you are adapting
-        makeDefault: false,
-        canBeDefault: true,
-        canConfigure: true
-      });
-    }); //This code is courtesy of u/Freeze014
-    ```
-  * Reload Foundry after saving your .mjs file
+1. Open your .mjs file in Visual Studio and add the following code:
+   * ```javascript
+     class TIO extends foundry.applications.sheets.journal.JournalEntrySheet { //Replace "TIO" with the uppercase abbreviation for the adventure you are adapting
+       constructor(doc, options) {
+         super(doc, options);
+         this.options.classes.push("tio"); //Replace "tio" with the lowercase abbreviation for the adventure you are adapting
+       }
+     }
+     Hooks.on("init", () => {
+       foundry.applications.apps.DocumentSheetConfig.registerSheet(JournalEntry, MODULE_ID, TIO, { //Replace "TIO" with the uppercase abbreviation for the adventure you are adapting
+         types: ["base"],
+         label: "Troubles in Otari", //Replace "Troubles in Otari" with the name of the adventure you are adapting
+         makeDefault: false,
+         canBeDefault: true,
+         canConfigure: true
+       });
+     }); //This code is courtesy of u/Freeze014
+     ```
+2. Reload Foundry after saving your .mjs file
 
 ## Step 2: Changing the Sheet for each Journal in Foundry
-* Next you will want to change the Journals in Foundry to the new Sheet we've just registered. Open up a journal, and in the top-right corner click the "three dots" icon ( ⁝ ) to edit the settings.
-* Click the gear option in the menu that says "configure sheet".
-* Under Document click the dropdown for "This Sheet", and select the dropdown entry that matches the label from your .mjs code above ("Troubles in Otari" in my case).
-* Press Save Sheet Configuration.
-* Repeat this step for each journal used by the adventure.
+1. Next you will want to change the Journals in Foundry to the new Sheet we've just registered. Open up a journal, and in the top-right corner click the "three dots" icon ( ⁝ ) to edit the settings.
+2. Click the gear option in the menu that says "configure sheet".
+3. Under Document click the dropdown for "This Sheet", and select the dropdown entry that matches the label from your .mjs code above ("Troubles in Otari" in my case).
+4. Press Save Sheet Configuration.
+5. Repeat this step for each journal used by the adventure.
 
 ## Step 3: Write a list of Variables for Adventure fonts and colors
-* Next we will list some variables. These make it so that if you make a mistake you only need to correct that mistake in one location, instead of all over the code.
-* Create a new rule for elements with the class we gave to those journals, in our case `.tio`. Make sure you include the period. Under this class we are going to name a variable and give it a value, in this case we want to get the color of the read out text. We will call it `--tio-green-darkest`, and for the value use the hex code of the color. See [Part 3, step 3](#step-3-getting-exact-colors) for more info on gathering color hexcodes.
+Next we will list some variables. These make it so that if you make a mistake you only need to correct that mistake in one location, instead of all over the code.
+1. Create a new rule for elements with the class we gave to those journals, in our case `.tio`. Make sure you include the period. Under this class we are going to name a variable and give it a value, in this case we want to get the color of the read out text. We will call it `--tio-green-darkest`, and for the value use the hex code of the color. See [Part 3, step 3](#step-3-getting-exact-colors) for more info on gathering color hexcodes.
    * ```css
      .tio {
         --tio-green-darkest: #004316;
      }
      ```
-* I recommend listing all the colors that are used by the text of your adventure under this rule. Additionally, any fonts that the adventure uses that are different from your baseline CSS can be listed as variables. As I went through Troubles in Otari, my list of variables ended up like this:
+2. I recommend listing all the colors that are used by the text of your adventure under this rule. Additionally, any fonts that the adventure uses that are different from your baseline CSS can be listed as variables. As I went through Troubles in Otari, my list of variables ended up like this:
    * ```css
       .tio {
         --tio-green-darkest: #004316;
@@ -337,7 +337,8 @@ Now that you have the fonts and colors, you really have everything you need to s
      ```
 
 ## Step 4: Write Style rules specific to the adventure
-* Next we are going to write some new rules to use this variable, starting with the Read Out box from [Part 2, step 2](#step-2-read-out-box) We will need one for the \<div> and one for paragraphs (\<p>) inside the \<div>. Each rule needs to start with the class we assigned earlier, in our case .tio. You can copy the border rules we made earlier and remove the listed variable and replace it with `#000`, which is just black. Additionally, we will make a similar rule to change the color of the paragraph text to our new variable `--tio-red-light`. Using a variable instead of a hex code is as simple as typing `var()` and copying and pasting the name of the variable into the parentheses.
+Next we are going to write some new rules to use this variable, starting with the Read Out box from [Part 2, step 2](#step-2-read-out-box).
+1. We will need one for the \<div> and one for paragraphs (\<p>) inside the \<div>. Each rule needs to start with the class we assigned earlier, in our case .tio. You can copy the border rules we made earlier and remove the listed variable and replace it with `#000`, which is just black. Additionally, we will make a similar rule to change the color of the paragraph text to our new variable `--tio-red-light`. Using a variable instead of a hex code is as simple as typing `var()` and copying and pasting the name of the variable into the parentheses.
    * ```css
      .tio div.read-out {
         border-top: 1px ridge #000;
@@ -347,36 +348,36 @@ Now that you have the fonts and colors, you really have everything you need to s
         color: var(--tio-red-light);
      }
      ```
-* Reload Foundry and see the changes have taken place.
-* The beauty of writing your .css file this way is you can make a specific style for an adventure, and have that style only apply to the journals you’ve set using the Journal Sheet Configuration. The rest of Foundry and your other journals will not be affected. Additionally, because of how we applied that class to the whole journal, you can change how the headings appear in your Journals as well, which is otherwise difficult to do.
+2. Reload Foundry and see the changes have taken place.
+The beauty of writing your .css file this way is you can make a specific style for an adventure, and have that style only apply to the journals you’ve set using the Journal Sheet Configuration. The rest of Foundry and your other journals will not be affected. Additionally, because of how we applied that class to the whole journal, you can change how the headings appear in your Journals as well, which is otherwise difficult to do.
 
 ## Step 5: Adventure Specific Headings
-* Because we applied a class to the journal entry we can write rules that would normally be too general and would conflict with other styles in Foundry. The biggest example of this is likely headings, which are used all over Foundry. We can target the headings that appear in our journals and change them too match the aesthetic of the adventure.
-   * ```css
-     .tio h1, .tio h2, .tio h3 {
-       border: none;
-       margin: 0.05em 0 0;
-       text-transform: uppercase;
-       overflow: hidden;
-       padding-top: 0.2em;
-     }
-     .tio h1 {
-       color: var(--tio-green-darkest);
-       font-family: var(--tio-h1-font);
-       font-size: 2em;
-       text-align: center;
-     }
-     .tio h2 {
-       color: var(--tio-green-darker);
-       font-family: var(--tio-h1-font);
-       font-size: 1.6em;
-     }
-     .tio h3 {
-       color: var(--tio-green-light);
-       font-family: 'Good OT Bold';
-       font-size: 1.4em;
-     }
-     ```
+Because we applied a class to the journal entry we can write rules that would normally be too general and would conflict with other styles in Foundry. The biggest example of this is likely headings, which are used all over Foundry. We can target the headings that appear in our journals and change them too match the aesthetic of the adventure.
+* ```css
+  .tio h1, .tio h2, .tio h3 {
+    border: none;
+    margin: 0.05em 0 0;
+    text-transform: uppercase;
+    overflow: hidden;
+    padding-top: 0.2em;
+  }
+  .tio h1 {
+    color: var(--tio-green-darkest);
+    font-family: var(--tio-h1-font);
+    font-size: 2em;
+    text-align: center;
+  }
+  .tio h2 {
+    color: var(--tio-green-darker);
+    font-family: var(--tio-h1-font);
+    font-size: 1.6em;
+  }
+  .tio h3 {
+    color: var(--tio-green-light);
+    font-family: 'Good OT Bold';
+    font-size: 1.4em;
+  }
+  ```
 * With these rules in place, whenever you use \<h1>, \<h2>, or \<h3> in a journal that you gave the flag .tio, that heading will be styled to match the adventure. This will work even on the top heading of a journal page, and you can adjust the level of each page using the default Foundry journal editor to get the heading correct.
 
 # Part 5: Adding Foundry Automation
