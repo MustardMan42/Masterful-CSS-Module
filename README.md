@@ -14,24 +14,24 @@ I have good news. 🎵You've got the touch, you've got the power!🎵 I can teac
 * The PDF of a [Pathfinder Adventure](https://store.paizo.com) you are adapting
 
 ## Recommended:
-* Own at least one official Pathfinder adventure module, if you don't have one the [Beginner Box](https://www.foundryvtt.store/products/pf2e-beginner-box) is a great place to start.
+* Own at least one official Pathfinder adventure module, if you don't have one the [Beginner Box](https://www.foundryvtt.store/products/pf2e-beginner-box) is a great place to start
 * [PDF to Foundry](https://foundryvtt.com/packages/pdftofoundry) module
 * [Custom CSS](https://foundryvtt.com/packages/custom-css) module
 * [Firefox](https://www.firefox.com/en-US/browsers/desktop/windows/)
 * [What the Font Font Finder](https://www.myfonts.com/pages/whatthefont/)
-* u/lady_of_luck has [a really helpful guide](https://www.reddit.com/r/FoundryVTT/s/oblivFIO1g) that I recommend reading, I used their guide and their code for this project.
+* u/lady_of_luck has [a really helpful guide](https://www.reddit.com/r/FoundryVTT/s/oblivFIO1g) that I recommend reading, I used their guide and their code for this project
 
 ## Part 1: Injecting a CSS file into Foundry using a Module
 There are two ways I am aware of to inject a .css file into Foundry, one is to use a module like World Scripter and the other is to create your own module. As of today (May 2026), v14 is the newest version of Foundry and the World Scripter module is not updated to v14, so that is not currently a viable option. That means you can either make your own module, or you can use mine. Being the benevolent internet citizen that I am, I created a simple module that you can use, although I think you should consider making your own module (see [here](#option-2-making-your-own-module)). Installing my module is easy and fast, as fast as installing any other module for Foundry. This version supports Foundry version v14 and v13, I don't gurantee support for earlier or later versions of Foundry.
 
 ## Option 1: Install the Masterful CSS Module in Foundry
- * Copy [this link to the 1.2.0 module.json file](https://github.com/MustardMan42/Masterful-CSS-Module/releases/download/1.2.0/module.json)
- * In Foundry, open your Add-on Modules page and click the "Install Module" button
- * At the bottom of the installation window, paste the link (above) in the Manifest URL box
- * Click the "Install" button
- * Open a World of your choosing in the Game Worlds tab in Foundry
- * In the Settings, click the Manage Modules button under Game Settings
- * Click the checkbox next to Masterful CSS Module and then click Save Module Settings. The world should then reload
+ * Copy [this link to the 1.2.0 module.json file](https://github.com/MustardMan42/Masterful-CSS-Module/releases/download/1.2.0/module.json).
+ * In Foundry, open your Add-on Modules page and click the "Install Module" button.
+ * At the bottom of the installation window, paste the link (above) in the Manifest URL box.
+ * Click the "Install" button.
+ * Open a World of your choosing in the Game Worlds tab in Foundry.
+ * In the Settings, click the Manage Modules button under Game Settings.
+ * Click the checkbox next to Masterful CSS Module and then click Save Module Settings. The world should then reload.
  * Under the compendiums tab, click the compendium called Magnificent Examples by MustardMan42, and import the journals from that compendium. Those journals contain a (very basic) local version of this text guide, an HTML Examples journal with html code for quick copying, and a Letter Handouts journal pre-styled to look like a letter your players found.
 
 ## Option 2: Making Your Own Module
@@ -44,18 +44,18 @@ While my module is perfectly fine to get started with, I can't write all the CSS
  * For personal use I prefer one module that contains all the adventures that I’ve adapted to Foundry. If I were to distribute the module to others I would prefer one module per adventure, but I would want to create some sort of system to standardize and document any sweeping changes across all modules.
 
 ### Step 2: Setting Up A Module
-* Once you've decided how many modules you are making you will need to create the module(s) using Foundry
+* Once you've decided how many modules you are making you will need to create the module(s) using Foundry.
 * In the modules page in your Foundry set up page, click the gear icon to open up a form to start inputting the module information. There is [an article](https://foundryvtt.com/article/module-maker/) in the Foundry Knowledge Base that explains these options in detail as well.
    * Name the module anything you’d like. The package identifier should populate automatically.
    * Set the package version. If you are doing this module as part of a large project you may have a real system for the version numbers, especially if this module will be available to the public. Otherwise you can leave it at 1.
    * You don’t need a package URL, but if you are hosting your module on github or another file sharing service you can put the link there. That is important again for if you are selling or giving away your module to other people.
    * You should set the compatibility to the current version of Foundry, if you later upgrade to a new version you will want to change this number later or Foundry will yell at you every time you load the world.
-   * Add author details if you expect to be available to maintain this project for others, otherwise this is unnecessary
+   * Add author details if you expect to be available to maintain this project for others, otherwise this is unnecessary.
    * Create a compendium pack. You will need to write the name in lowercase and separated by hyphens. I like using the Adventure document type, but if you are only including journals or only listing maps you could use journals or scenes.
-   * If your module is only going to be compatible with one game system select that system from the list of systems you have installed
-   * Once you press the "Create Module" button at the bottom of the window, Foundry will create the folder in the module directory and a module.json file in that directory
-* If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later
-* With your module created you will need to set up some additional folders to stay organized
+   * If your module is only going to be compatible with one game system select that system from the list of systems you have installed.
+   * Once you press the "Create Module" button at the bottom of the window, Foundry will create the folder in the module directory and a module.json file in that directory.
+* If you make a mistake while filling out the module details do not panic, you can edit the module.json directly to correct any mistakes or add information later.
+* With your module created you will need to set up some additional folders to stay organized.
    * In the folder for your module you will want to create at least an assets folder and a styles folder. If you are planning on having a lot of script files you could create a scripts folder.
    * Inside your styles folder you will want to make a fonts subfolder, this is where all your fonts for this module should live. In the styles folder itself you will put your .css file.
      * Open Visual Studio and press CTRL + N to create a Text File, or click the File menu to do the same thing. Save it as a .css with whatever name you want, and save it to your Foundry directory in your css folder. Whether you're hosting locally or not, make sure you can get the path to that file.
@@ -89,7 +89,7 @@ While my module is perfectly fine to get started with, I can't write all the CSS
    * You should now see in the compendiums tab your compendium, which you can edit if you unlock it.
    * If you have existing journals, actors, scenes, or items for your adventure(s) (such as from a PDF to Foundry import), you can create an adventure in this compendium and drag and drop the elements from the sidebar to the compendium.
 
-Once the journals are inside your compendium, you are ready to actually start writing style rules to make your journals pretty
+Once the journals are inside your compendium, you are ready to actually start writing style rules to make your journals pretty.
 
 # Part 2: Basics of HTML and CSS
 In this section I will go over the basics of writing a CSS file and the accompanying HTML code in Foundry to ensure that the style rules apply. I will go into some detail into the reasoning why to follow this method, but HTML and CSS are the building blocks of the internet that you use daily, and there are many robust resources you can use to learn much more than I will be teaching you today. I will be focusing on adapting Pathfinder adventures, but the techniques in this section will apply universally to any adventure text that you have a PDF copy of.
@@ -166,9 +166,9 @@ I recommend using [W3Schools](https://www.w3schools.com) if you ever have questi
     * Set the `max-width` property to a value of `33%`. You can change that percentage value to be higher or lower, as written this keeps the \<figure> from taking up more than a third of the page.
     * Finally I like setting the `margin` property to a value of `0` so that the text surrounding the figure gets close to the image. You could even set the margin to a negative value if you really wanted the text to crowd in, but you would risk the text obscuring the image.
 * Our next set of rules is for \<figcaption> elements that are inside of a \<figure> that has the class "insert". To achieve this our selector will be `figure.insert figcaption {}`. Foundry already makes the \<figcaption> text bold, italicizes it and centers the text inside of the container. For my purposes I want to change the font, make the text all capital letters, and undo the italicization:
-    * Set the `font-family` to `'Gelasio'`, you can change this to any font you want that is installed in Foundry
-    * Set `text-transform` to `uppercase` to make any text appear to be capitalized, even if you didn't type it that way
-    * Set the `font-style` to `normal`, which removes the italicization
+    * Set the `font-family` to `'Gelasio'`, you can change this to any font you want that is installed in Foundry.
+    * Set `text-transform` to `uppercase` to make any text appear to be capitalized, even if you didn't type it that way.
+    * Set the `font-style` to `normal`, which removes the italicization.
 * Last but not least I want one rule that targets images inside of the \<figure>. To achieve this our selector will be `figure.insert img {}`. I want to remove the border that Foundry places around images by default
     * Set `border` to `none` or `0`.
 * By the end your code should look something like this:
@@ -243,7 +243,7 @@ I recommend using [W3Schools](https://www.w3schools.com) if you ever have questi
         <p>This is body text</p>
      </div>
      ```
-This should be enough for you to start writing your own CSS rules. The following sections Part 2 and Part 3 will dive deeper into getting your rules even close to the actual Pathfinder adventures using Fonts and colors
+This should be enough for you to start writing your own CSS rules. The following sections Part 2 and Part 3 will dive deeper into getting your rules even close to the actual Pathfinder adventures using Fonts and colors.
 
 # Part 3: Fine Details
 In this section I will go into detail on how to gather fonts and exact colors to use in your journals. Because you've followed the previous steps in the guide there will be less explanation of why to do things a certain way and more explanation of how to do them. Where possible I will refer back to previous sections in Part 1.
@@ -259,13 +259,13 @@ In this section I will go into detail on how to gather fonts and exact colors to
 ## Step 2: Gather Fonts
 * An additional benefit of having an official module as a guide is that you should have some of the officialy font files available in the module directory. You can copy these files into your own CSS folder. If you want your journal to look as good as possible you will want these font files.
 * Pathfinder 2e typically uses the following fonts:
-   * Body text uses Sabon Light Standard Roman (Gelasio is a pretty solid alternative that comes with the Pathfinder 2e system by default)
-   * Headings use Good OT Bold (Roboto Condensed Bold is a good alternative)
-   * Read aloud and side boxes use Good OT (Roboto Condensed is a good alternative)
-   * Headings for items and stat blocks use Good OT Condensed Bold
+   * Body text uses Sabon Light Standard Roman (Gelasio is a pretty solid alternative that comes with the Pathfinder 2e system by default).
+   * Headings use Good OT Bold (Roboto Condensed Bold is a good alternative).
+   * Read aloud and side boxes use Good OT (Roboto Condensed is a good alternative).
+   * Headings for items and stat blocks use Good OT Condensed Bold.
    * Specific adventures often have a unique font for top level headings, but you can usually find these out using [fontfinder](https://www.myfonts.com/pages/whatthefont/).
       * I myself have found the title fonts for Crown of the Kobold King (You Are Loved), Troubles in Otari (Alembic Beta) and Headshot the Rot (Roadkill Heavy) using this website.
-* Once you have a font file, place it in your CSS folder, and then install it in Foundry under the core settings. You will want to keep the file path so you can add the fonts to your css file
+* Once you have a font file, place it in your CSS folder, and then install it in Foundry under the core settings. You will want to keep the file path so you can add the fonts to your css file.
 * At the top of your .css file you can list any fonts you plan to use. This directs your style rules to what fonts you mean and where the files are in your directory. Start with “@font-face {”, listing the font-family (the name), the source url (where the file is), and whether the file is an opentype font or truetype. You can determine this by looking at the file format of the font you are using.
    * ```css
      /* Custom Fonts */
@@ -284,7 +284,7 @@ In this section I will go into detail on how to gather fonts and exact colors to
 Now that you have the fonts and colors, you really have everything you need to start sprucing up your journals and make them look like the actual PDFs. For the following part, I will show you how to flag your journals to use only the rules you write for that adventure, and then go over some of the common changes I make to text like headings.
   
 ## Step 1: Adjusting your .mjs file
-* Open your .mjs file in Visual Studio and add the following code.
+* Open your .mjs file in Visual Studio and add the following code:
   * ```javascript
     class TIO extends foundry.applications.sheets.journal.JournalEntrySheet { //Replace "TIO" with the uppercase abbreviation for the adventure you are adapting
       constructor(doc, options) {
@@ -306,10 +306,10 @@ Now that you have the fonts and colors, you really have everything you need to s
 
 ## Step 2: Changing the Sheet for each Journal in Foundry
 * Next you will want to change the Journals in Foundry to the new Sheet we've just registered. Open up a journal, and in the top-right corner click the "three dots" icon ( ⁝ ) to edit the settings.
-* Click the gear option in the menu that says "configure sheet"
-* Under Document click the dropdown for "This Sheet", and select the dropdown entry that matches the label from your .mjs code above ("Troubles in Otari") in my case
-* Press Save Sheet Configuration
-* Repeat this step for each journal used by the adventure
+* Click the gear option in the menu that says "configure sheet".
+* Under Document click the dropdown for "This Sheet", and select the dropdown entry that matches the label from your .mjs code above ("Troubles in Otari" in my case).
+* Press Save Sheet Configuration.
+* Repeat this step for each journal used by the adventure.
 
 ## Step 3: Write a list of Variables for Adventure fonts and colors
 * Next we will list some variables. These make it so that if you make a mistake you only need to correct that mistake in one location, instead of all over the code.
@@ -344,8 +344,8 @@ Now that you have the fonts and colors, you really have everything you need to s
         color: var(--tio-red-light);
      }
      ```
-* Reload Foundry and see the changes have taken place
-* The beauty of writing your .css file this way is you can make a specific style for an adventure, and have that style only apply to the journals you’ve flagged as needing them. The rest of Foundry and your other journals will not be affected. Additionally, because of how we applied that class, you can change how the headings appear in your Journals as well, which is otherwise difficult to do.
+* Reload Foundry and see the changes have taken place.
+* The beauty of writing your .css file this way is you can make a specific style for an adventure, and have that style only apply to the journals you’ve set using the Journal Sheet Configuration. The rest of Foundry and your other journals will not be affected. Additionally, because of how we applied that class to the whole journal, you can change how the headings appear in your Journals as well, which is otherwise difficult to do.
 
 ## Step 5: Adventure Specific Headings
 * Because we applied a class to the journal entry we can write rules that would normally be too general and would conflict with other styles in Foundry. The biggest example of this is likely headings, which are used all over Foundry. We can target the headings that appear in our journals and change them too match the aesthetic of the adventure.
@@ -378,7 +378,7 @@ Now that you have the fonts and colors, you really have everything you need to s
 
 # Part 5: Adding Foundry Automation
 * In Pathfinder 2e we have some baseline automation that can be achieved to make running the game as smooth as possible. We are going to automate some checks, some actions, and some other miscellaneous rolls.
-* Your best resource is the [Pathfinder 2e Foundry VTT System wiki](https://github.com/foundryvtt/pf2e/wiki)
+* Your best resource is the [Pathfinder 2e Foundry VTT System wiki](https://github.com/foundryvtt/pf2e/wiki).
 
 ## Step 1: Inline Rolls
 * Opening up this journal page, we can see some DCs, and some capitalized words that indicate that a specific action is being called for. This one says “Balance,” which is an action the player characters can take. To automate this we will use /act, surrounded by double brackets. Then we add the dc by typing dc equals 19. Make sure you use all lowercase when typing out the name of the action.
