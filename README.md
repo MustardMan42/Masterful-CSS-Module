@@ -97,32 +97,32 @@ Once the journals are inside your compendium, you are ready to actually start wr
 In this section I will go over the basics of writing a CSS file and the accompanying HTML code in Foundry to ensure that the style rules apply. I will go into some detail into the reasoning why to follow this method, but HTML and CSS are the building blocks of the internet that you use daily, and there are many robust resources you can use to learn much more than I will be teaching you today. I will be focusing on adapting Pathfinder adventures, but the techniques in this section will apply universally to any adventure text that you have a PDF copy of.
 
 ## Step 1: Read Out Box
-* You are ready to start writing style rules in your .css file, but for this first one I am going to advise you copy my code. The [second example](#step-3-embedding-an-image) will walk through step by step how I write these rules.
-* Our first target will be a common element in a Pathfinder adventure, the Read Out box. Open your .css file in Visual Studio and copy and paste the following code:
-    * ```css
-      div.read-out {
-        border-left: none;
-        border-right: none;
-        border-top: 1px ridge #000;
-        border-bottom: 1px ridge #000;
-        box-shadow: 0 5px 10px -8px #000;
-        padding: 0.25rem;
-        margin: 0.5rem 0;
-      }
-      div.read-out p {
-        font-family: 'Roboto Condensed'; /* Change to 'Good OT' if you have that font available */
-        font-size: 1.05em; /* using the x.xxem format means that your size changes scale with the default font size set by Foundry, but you can set this value to the height in pixels you want (e.g. 12px) or the percentage of the base font height (e.g. 105%) */
-      }
-      ```
-* That code will apply some styling to make a box like the read out text sections from a Pathfinder adventure. If you want to increase the accuracy of the look, change the `font-family` from `'Gelasio'` to `'Good OT'`. Keep in mind you will need to have the Good OT font installed in order for that to work. For more info about getting that and other fonts see [Part 3, Step 2](#step-2-gather-fonts).
-* Save your .css file and overwrite it to your Foundry directory, and then reload Foundry using F5. 
-* Now open the journal you are editing, open the HTML view, and copy and paste the following code into the HTML editor:
-    * ```html
-      <div class="read-out">
-          <p>Replace this text!</p>
-      </div>
-      ```
-* Once you click save you should see that the \<div> was created with some text inside and is being styled according to the rules in your .css file.
+You are ready to start writing style rules in your .css file, but for this first one I am going to advise you copy my code. The [second example](#step-3-embedding-an-image) will walk through step by step how I write these rules.
+1. Our first target will be a common element in a Pathfinder adventure, the Read Out box. Open your .css file in Visual Studio and copy and paste the following code:
+   * ```css
+     div.read-out {
+       border-left: none;
+       border-right: none;
+       border-top: 1px ridge #000;
+       border-bottom: 1px ridge #000;
+       box-shadow: 0 5px 10px -8px #000;
+       padding: 0.25rem;
+       margin: 0.5rem 0;
+     }
+     div.read-out p {
+       font-family: 'Roboto Condensed'; /* Change to 'Good OT' if you have that font available */
+       font-size: 1.05em; /* using the x.xxem format means that your size changes scale with the default font size set by Foundry, but you can set this value to the height in pixels you want (e.g. 12px) or the percentage of the base font height (e.g. 105%) */
+     }
+     ```
+2. That code will apply some styling to make a box like the read out text sections from a Pathfinder adventure. If you want to increase the accuracy of the look, change the `font-family` from `'Gelasio'` to `'Good OT'`. Keep in mind you will need to have the Good OT font installed in order for that to work. For more info about getting that and other fonts see [Part 3, Step 2](#step-2-gather-fonts).
+3. Save your .css file and overwrite it to your Foundry directory, and then reload Foundry using F5. 
+4. Now open the journal you are editing, open the HTML view, and copy and paste the following code into the HTML editor:
+   * ```html
+     <div class="read-out">
+         <p>Replace this text!</p>
+     </div>
+     ```
+5. Once you click save you should see that the \<div> was created with some text inside and is being styled according to the rules in your .css file.
 
 ## How did that work?
 What we just did used a combination of HTML (Hypertext Markup Language) and a CSS (Cascading Style Sheet) file. We applied a “class” to the element using HTML, which told Foundry to apply the styling we wrote for that class in the CSS file to that element.
